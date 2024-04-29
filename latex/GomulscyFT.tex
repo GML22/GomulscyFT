@@ -1,0 +1,100 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%    Historia rodziny Gomulskich z Desna    %%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%                Mateusz Gomulski               %%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Konfigurujemy klasę dokumentu
+\documentclass[left=2.5cm, right=2.5cm, top=2.5cm, bottom=3cm, 
+bindingoffset=6mm, nohyphenation=false]{Pakiety/thesis}
+
+% Definiujemy język i ścieżkę do obrazów
+\langpol
+\graphicspath{{Obrazy//}}
+
+% Dodajemy bibliografię
+\addbibresource{Bibliografia//bibliografia.bib}
+
+% Konfigurujemy stronę tytułową
+\title{\Huge{\textbf{Historia rodziny Gomulskich z~Desna}}}
+\author{Mateusz Gomulski}
+\date{\vfill \includegraphics[width=0.15\textwidth]{GML_LOGO5_black4.png} 
+\large{\\Listopad 2023}}
+
+% Rozpoczynamy dokument
+\begin{document}
+
+%-----------------------------------------------------------------------------
+% Przednia okładka
+%-----------------------------------------------------------------------------
+\includepdf{Gomulscy_okladka_front.png}
+
+% Dodajemy pustą stronę
+\cleardoublepage
+
+%-----------------------------------------------------------------------------
+% Strona tytułowa
+%-----------------------------------------------------------------------------
+\clearpage
+\setcounter{page}{1}
+\maketitle
+
+% Dodajemy pustą stronę
+\cleardoublepage
+\begin{center}
+	\thispagestyle{empty}
+    \vspace*{3cm}
+    \Large{Pamięci babci Jadzi i~dziadka Staśka Gomulskich \\ 
+    Niech spoczywają w~pokoju wiecznym \\ Amen ~\CrossOpenShadow}
+    \vfill
+\end{center}
+
+%-----------------------------------------------------------------------------
+% Spis treści
+%-----------------------------------------------------------------------------
+\cleardoublepage
+\tableofcontents
+
+%-----------------------------------------------------------------------------
+% Rozdziały
+%-----------------------------------------------------------------------------
+\cleardoublepage
+\input{Wstep/Wstep}
+
+\cleardoublepage
+\input{Rozdzial_I/Rozdzial_I}
+
+\cleardoublepage
+\input{Rozdzial_II/Rozdzial_II}
+
+\cleardoublepage
+\input{Rozdzial_III/Rozdzial_III}
+
+\cleardoublepage
+\input{Rozdzial_IV/Rozdzial_IV}
+
+\cleardoublepage
+\input{Rozdzial_V/Rozdzial_V}
+
+\cleardoublepage
+\input{Zakonczenie/Zakonczenie}
+                           
+%-----------------------------------------------------------------------------
+% Literatura
+%-----------------------------------------------------------------------------
+\cleardoublepage
+\newrefcontext[sorting=nty]
+\printbibliography
+
+%-----------------------------------------------------------------------------
+% Załączniki
+%-----------------------------------------------------------------------------
+\cleardoublepage
+\input{Zalaczniki/Zalaczniki}
+
+%-----------------------------------------------------------------------------
+% Tylna okładka
+%-----------------------------------------------------------------------------
+\includepdf{Gomulscy_okladka_back.png}
+
+% Zamykamy dokument
+\end{document}

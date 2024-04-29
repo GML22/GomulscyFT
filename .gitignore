@@ -1,0 +1,7 @@
+*.zip
+*.pyc
+*.xlsx
+*.xls
+*.xlsb
+*.obj
+/.vscode/
