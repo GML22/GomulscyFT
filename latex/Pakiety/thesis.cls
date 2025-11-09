@@ -50,6 +50,7 @@
 \RequirePackage{titlesec}
 \RequirePackage[labelfont=bf, textfont=bf]{caption}
 \RequirePackage{xparse}
+\RequirePackage{lettrine}
 
 % Zmiana czcionki
 \RequirePackage{fontspec}
@@ -127,6 +128,9 @@
 % Zmiana nazwy z "Listing" na "Kod źródłowy"
 \renewcommand\lstlistingname{\large Kod źródłowy}
 \renewcommand\lstlistlistingname{\large Kod źródłowy}
+
+% Ustawienia lettrine
+\renewcommand{\LettrineTextFont}{\normalfont}
 
 % Ustawienie interlinii 1.15 w tekście i 1 w trybie matematycznym
 \setstretch{1.2}
@@ -207,16 +211,13 @@
 	\fancyhead{}
 	\renewcommand{\headrulewidth}{1pt}
 	\fancyheadoffset{0cm}
-	\fancyhead[RO]{\nouppercase{\thesection.\hspace{8pt}\leftmark}}
-	\fancyhead[LE]{\nouppercase{\thesection.\hspace{8pt}\leftmark}}
+	\fancyhead[LE,RO]{\nouppercase{\leftmark}}
 	\fancyfoot{}
 	\fancyfoot[LE,RO]{\thepage}
 }
 \pagestyle{headings}
 
-\renewcommand{\sectionmark}[1]{
-	\markboth{#1}{#1}
-}
+\renewcommand{\sectionmark}[1]{}
 
 % Ustawienia domyślnej listy
 \setlist[itemize,1]{topsep=2pt,label=\large$\bullet$, leftmargin=28pt}
@@ -294,3 +295,17 @@
     \renewcommand{\thesection}{\@appendixtitle~\arabic{section}}
 }
 \setcounter{tocdepth}{1}
+
+% Makro do wyświetlania bieżącego miesiąca i roku
+\newcommand{\miesiacrok}{%
+  \ifcase\month
+  \or Styczeń\or Luty\or Marzec\or Kwiecień\or Maj\or Czerwiec%
+  \or Lipiec\or Sierpień\or Wrzesień\or Październik\or Listopad\or Grudzień%
+  \fi\space\number\year}
+
+  % Makro do wyświetlania bieżącego miesiąca i roku 2
+\newcommand{\miesiacrokdwa}{%
+  \ifcase\month
+  \or styczeń\or luty\or marzec\or kwiecień\or maj\or czerwiec%
+  \or lipiec\or sierpień\or wrzesień\or październik\or listopad\or grudzień%
+  \fi\space\number\year\space r.}
