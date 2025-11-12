@@ -115,6 +115,10 @@
 % Ustawienie marginesu dla przypisów
 \setlength\footnotemargin{10pt}
 
+% Ustawienia ramek dla obrazków
+\setlength{\fboxrule}{5pt} % grubość ramki
+\setlength{\fboxsep}{0pt}  % odstęp między obrazkiem a ramką
+
 % Ustawienie sekcji
 \newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
 
@@ -122,7 +126,11 @@
                                      {-3.25ex\@plus -1ex \@minus -.2ex}%
                                      {1.5ex \@plus .2ex}%
                                      {\normalfont\normalsize\bfseries}}
-\setcounter{secnumdepth}{4} 
+
+% Ustawienia numeracji sekcji do poziomu 4
+\setcounter{secnumdepth}{4}
+
+% Ustawienia pakietu listings
 \urlstyle{rm}                                  
 
 % Zmiana nazwy z "Listing" na "Kod źródłowy"
@@ -174,8 +182,9 @@
 
 % Ustawienia spisu treści
 \setlength{\cftbeforesecskip}{2pt}
-\renewcommand{\cftsecfont}{\bf\normalsize}
-\renewcommand{\cftsecpagefont}{\normalfont}
+\renewcommand{\cftchapfont}{\bf\normalsize} % Pogrubienie nazw rozdziałów
+\renewcommand{\cftsecfont}{\normalsize}    % Normalna czcionka dla sekcji
+\renewcommand{\cftsecpagefont}{\normalfont} % Normalna czcionka dla numerów stron sekcji
 \renewcommand{\cftsecleader}{\cftdotfill{\cftsecdotsep}}
 \renewcommand{\cftsecdotsep}{\cftdotsep}
 
@@ -201,23 +210,29 @@
 	\oldsection
 }
 
+% Ustawienia stylu strony
 \fancypagestyle{plain}{
 	\fancyhf{}
 	\renewcommand{\headrulewidth}{0pt}
 	\fancyfoot[LE,RO]{\thepage}
 }
 
+% Ustawienia stylu nagłówków
 \fancypagestyle{headings}{
-	\fancyhead{}
-	\renewcommand{\headrulewidth}{1pt}
-	\fancyheadoffset{0cm}
-	\fancyhead[LE,RO]{\nouppercase{\leftmark}}
-	\fancyfoot{}
-	\fancyfoot[LE,RO]{\thepage}
+    \fancyhead{} % Usuń nagłówki
+    \renewcommand{\headrulewidth}{1pt} % Linia w nagłówku
+    \fancyheadoffset{0cm}
+    \fancyhead[LE]{\nouppercase{\hfill\leftmark}} % Nazwa rozdziału na stronach parzystych
+    \fancyhead[RO]{\nouppercase{\leftmark}} % Nazwa sekcji na stronach nieparzystych
+    \fancyfoot{} % Usuń stopki
+    \fancyfoot[LO]{\thepage} % Numer strony na dole z lewej (nieparzyste)
+    \fancyfoot[RE]{\thepage} % Numer strony na dole z prawej (parzyste)
 }
 \pagestyle{headings}
 
-\renewcommand{\sectionmark}[1]{}
+% Przywrócenie oznaczania rozdziałów w nagłówkach
+\renewcommand{\chaptermark}[1]{\markboth{#1}{#1}}
+\renewcommand{\sectionmark}[1]{\markright{#1}}
 
 % Ustawienia domyślnej listy
 \setlist[itemize,1]{topsep=2pt,label=\large$\bullet$, leftmargin=28pt}
@@ -256,6 +271,8 @@
         \chapter*{List of Symbols and Abbreviations}
     \fi
 }
+
+% Akronim - makro
 \newcommand{\acronym}[2]{
     \par\noindent\hspace{0.4em}
     {\textbf{#1} -- #2}
@@ -267,6 +284,7 @@
     \bgroup\let\addcontentsline=\nocontentsline#1{#2}\egroup
 }
 
+% Definicja tytułu załącznika w zależności od języka
 \newcommand{\@appendixtitle}{
     \ifnum \pdf@strcmp{\@lang}{polish} = 0
         Załącznik
@@ -276,6 +294,7 @@
     \fi
 }
 
+% Definicja załącznika w spisie treści
 \let\standardappendix\appendix
 \renewcommand\appendix[1]{%
     \tocless\section{\hspace*{1.5em} #1}
@@ -283,6 +302,7 @@
         section}.\hspace*{0.5em} #1}
 }
 
+% Spis załączników w spisie treści - makro
 \newcommand\listofappendicestoc{
     \ifnum \pdf@strcmp{\@lang}{polish} = 0
         \section*{Spis załączników}\@starttoc{app}
@@ -309,3 +329,6 @@
   \or styczeń\or luty\or marzec\or kwiecień\or maj\or czerwiec%
   \or lipiec\or sierpień\or wrzesień\or październik\or listopad\or grudzień%
   \fi\space\number\year\space r.}
+
+% Makro do dużego pogrubionego tekstu
+\newcommand{\BigBold}[1]{\par\bigskip\noindent\textbf{\Large #1}\par\smallskip}
