@@ -332,3 +332,7 @@
 
 % Makro do dużego pogrubionego tekstu
 \newcommand{\BigBold}[1]{\par\bigskip\noindent\textbf{\Large #1}\par\smallskip}
+
+\newenvironment{centeredquote}
+  {\vspace*{0.5cm}\begin{center}\begin{minipage}{0.75\linewidth}\begin{quote}{ }}
+  {\end{quote}\end{minipage}\end{center}}
