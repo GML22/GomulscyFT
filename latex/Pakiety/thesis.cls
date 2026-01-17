@@ -336,3 +336,7 @@
 \newenvironment{centeredquote}
   {\vspace*{0.5cm}\begin{center}\begin{minipage}{0.75\linewidth}\begin{quote}{ }}
   {\end{quote}\end{minipage}\end{center}}
+
+  % Ustawienie interlinii w tabelach
+\renewcommand{\arraystretch}{1.5}
+\setlength{\arrayrulewidth}{1.5pt}

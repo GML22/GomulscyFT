@@ -8,7 +8,7 @@ $InputPDF = "\\192.168.0.112\home\Mateusz\Genealogia\Gomulscy\GomulscyFT\latex\G
 $OutputFile = "\\192.168.0.112\home\Mateusz\Genealogia\Gomulscy\GomulscyFT\Historia rodziny Gomulskich z Desna.pdf"
 
 # Arguments for Ghostscript
-$Arguments = "-dNOPAUSE -dQUIET -dBATCH -dPrinted=false -dAutoRotatePages=/None -sDEVICE=pdfwrite -o `"$OutputFile`" -f `"$InputPDF`""
+$Arguments = @("-dNOPAUSE", "-dQUIET", "-dBATCH", "-sDEVICE=pdfwrite", "-dCompatibilityLevel=1.5", "-dPDFSETTINGS=/ebook", "-dDetectDuplicateImages=true", "-dEmbedAllFonts=true", "-dSubsetFonts=true", "-o `"$OutputFile`"", "-f `"$InputPDF`"")
 
 # Execute Ghostscript with the specified arguments
 Start-Process -FilePath $GhostscriptPath -ArgumentList $Arguments -NoNewWindow -Wait
