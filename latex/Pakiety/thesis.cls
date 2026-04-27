@@ -51,10 +51,14 @@
 \RequirePackage[labelfont=bf, textfont=bf]{caption}
 \RequirePackage{xparse}
 \RequirePackage{lettrine}
+\RequirePackage{microtype} % Pakiet do lepszego zarządzania odległością słów
 
 % Zmiana czcionki
 \RequirePackage{fontspec}
 \setmainfont{TeX Gyre Pagella}
+
+% Pakiet rysunkowy
+\RequirePackage{tikz}
 
 %-----------------------------------------------------------------------------
 % Ustawienia pobranych pakietów
@@ -161,6 +165,11 @@
     urlcolor=black,
     pdfauthor=author
 }
+
+% Ustalanie tolerancji odnośnie odległości słów
+\tolerance=2000
+\emergencystretch=3em
+\hfuzz=0.2pt
 
 % Ustawienia marginesów
 \RequirePackage[
@@ -316,6 +325,9 @@
 }
 \setcounter{tocdepth}{1}
 
+% Makro do wyswietlania bieżącego roku
+\newcommand{\biezacyrok}{\number\year\space~r.}
+
 % Makro do wyświetlania bieżącego miesiąca i roku
 \newcommand{\miesiacrok}{%
   \ifcase\month
@@ -328,7 +340,7 @@
   \ifcase\month
   \or styczeń\or luty\or marzec\or kwiecień\or maj\or czerwiec%
   \or lipiec\or sierpień\or wrzesień\or październik\or listopad\or grudzień%
-  \fi\space\number\year\space r.}
+  \fi\space\number\year\space~r.}
 
 % Makro do dużego pogrubionego tekstu
 \newcommand{\BigBold}[1]{\par\bigskip\noindent\textbf{\Large #1}\par\smallskip}
@@ -340,3 +352,5 @@
   % Ustawienie interlinii w tabelach
 \renewcommand{\arraystretch}{1.5}
 \setlength{\arrayrulewidth}{1.5pt}
+
+\usetikzlibrary{arrows.meta, positioning, calc}
