@@ -12,6 +12,11 @@ Celem projektu jest przedstawienie genealogii rodziny Gomulskich z Desna w świe
 
 [3) Drzewa genealogicznego rodziny Gomulskich w witrynie MyHeritage](https://www.myheritage.pl/family-trees/gomulski/OYYV7EGJ2VLPGTGCPTQWN7YXWO36QYA?familyTreeID=1)
 
+<br>
+<p align="center">
+  <img width=75% height=75% src="/inkscape/Drzewo genealogiczne rodziny Gomulskich z Desna.png"/>
+</p>
+
 ### Najważniejsze źródła historyczne projektu:
 * [Baza zbiorów archiwalnych Szukajwarchiwach](https://www.szukajwarchiwach.gov.pl)
 * [Baza indeksów metrykalnych LubGens](https://regestry.lubgens.eu)

@@ -7,8 +7,17 @@ $InputPDF = "\\192.168.0.112\home\Mateusz\Genealogia\Gomulscy\GomulscyFT\latex\G
 # Compressed Output file path
 $OutputFile = "\\192.168.0.112\home\Mateusz\Genealogia\Gomulscy\GomulscyFT\Historia rodziny Gomulskich z Desna.pdf"
 
-# Arguments for Ghostscript
-$Arguments = @("-dNOPAUSE", "-dQUIET", "-dBATCH", "-sDEVICE=pdfwrite", "-dCompatibilityLevel=1.5", "-dPDFSETTINGS=/ebook", "-dDetectDuplicateImages=true", "-dEmbedAllFonts=true", "-dSubsetFonts=true", "-o `"$OutputFile`"", "-f `"$InputPDF`"")
+# Arguments for PDF
+$ArgumentsPDF = @("-dNOPAUSE", "-dQUIET", "-dBATCH", "-sDEVICE=pdfwrite", "-dCompatibilityLevel=1.5", "-dPDFSETTINGS=/ebook", "-dDetectDuplicateImages=true", "-dEmbedAllFonts=true", "-dSubsetFonts=true", "-o `"$OutputFile`"", "-f `"$InputPDF`"")
 
-# Execute Ghostscript with the specified arguments
-Start-Process -FilePath $GhostscriptPath -ArgumentList $Arguments -NoNewWindow -Wait
+# Execute Ghostscript for PDF
+Start-Process -FilePath $GhostscriptPath -ArgumentList $ArgumentsPDF -NoNewWindow -Wait
+
+# Declare PNG path
+$PngPath = $OutputFile -replace '\.pdf$', '.png'
+
+# Arguments for PNG
+$ArgumentsPNG = @("-dNOPAUSE", "-dBATCH", "-sDEVICE=png16m", "-r150", "-dTextAlphaBits=4","-dGraphicsAlphaBits=4", "-sOutputFile=`"$PngPath`"", "`"$OutputFile`"")
+
+# Execute Ghostscript for PNG
+Start-Process -FilePath $GhostscriptPath -ArgumentList $ArgumentsPNG -NoNewWindow -Wait
