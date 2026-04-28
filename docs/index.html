@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historia rodziny Gomulskich z Desna</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+            background-color: #333;
+        }
+        #pdf-viewer {
+            width: 100%;
+            height: 100vh;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <iframe 
+        id="pdf-viewer" 
+        src="">
+    </iframe>
+    <script>
+        // 1. Nazwa pliku
+        const pdfFileName = "Historia_rodziny_Gomulskich_z_Desna.pdf";
+        
+        // 2. Ścieżka do viewera PDF.js
+        const viewerPath = "pdfjs/web/viewer.html";
+        
+        // 3. Łączymy to w całość
+        const finalUrl = `${viewerPath}?file=${encodeURIComponent('../../' + pdfFileName)}`;
+        
+        document.getElementById("pdf-viewer").src = finalUrl;
+    </script>
+</body>
+</html>
