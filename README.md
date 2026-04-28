@@ -6,7 +6,7 @@
 Celem projektu jest przedstawienie genealogii rodziny Gomulskich z Desna w świetle dostępnych obecnie źródeł historycznych. Projekt składa się z trzech wiodących części:<br>
 </p>
 
-[1) Graficznej wizualizacji drzewa genealogicznego rodziny Gomulskich](Drzewo%20genealogiczne%20rodziny%20Gomulskich%20z%20Desna.pdf)
+[1) Graficznej wizualizacji drzewa genealogicznego rodziny Gomulskich](inkscape/Drzewo%20genealogiczne%20rodziny%20Gomulskich%20z%20Desna.png)
 
 [2) Książki pt. "Historia rodziny Gomulskich z Desna"](https://gml22.github.io/GomulscyFT)
 
