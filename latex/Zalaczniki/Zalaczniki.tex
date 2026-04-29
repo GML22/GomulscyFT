@@ -1267,6 +1267,7 @@ Karoliny praprapradziadek.
 \begin{figure}[!ht]
 \vspace*{1cm}
 \centering
+\hspace*{0.1cm}
 \begin{tikzpicture}[
   % Definiujemy stałe odstępy
   node distance=1cm and 1cm, 
@@ -1442,6 +1443,7 @@ below=1.5cm of Slub4] {};
 
 \begin{figure}[!ht]
 \centering
+\hspace*{0.3cm}
 \begin{tikzpicture}[
   % Definiujemy stałe odstępy
   node distance=1cm and 1cm, 
@@ -1466,8 +1468,8 @@ below=1.5cm of Slub4] {};
 \vspace*{0.5cm}
 \end{figure}
 
-Połączenie rodzin Piotrkowiczów i Gomulskich miało też miejsce w~dalszych
-pokoleniach, za~sprawą potomków najmłodszego brata Jana -- Stanisława. Dnia
+Połączenie rodzin Piotrkowiczów i~Gomulskich miało też miejsce w~dalszych
+pokoleniach, za~sprawą potomków najmłodszego syna Jana -- Stanisława. Dnia
 24~lutego 1908~roku Stanisław Piotrkowicz wziął ślub w~Pustelniku z~Balbiną
 Główką (ur.~1891~r.~-- zm.~1963~r.), panną z~Kątów Goździejewskich (patrz ryc.
 \ref{fig:jpiotrkowicz_1871}). Para po ślubie zamieszkała w~Olesinie, gdzie
@@ -1517,14 +1519,14 @@ zm.~1999~r.) oraz Ryszarda (ur.~1927~r.~-- zm.~2003~r.).
 
 Najmłodsza córka Stanisława i~Balbiny Piotrkowiczów, Stanisława Magdalena,
 dnia 4~lutego 1940~roku wzięła ślub w~parafii Świętych Apostołów Piotra
-i~Pawła z~Aleksandrem Kowalczykiem kawalerem z~Krzewiny (ur.~1911~r.~--
-zm.~1987~r.). Para dochowała się wspólnie szóstki synów, jeden z~nich Józef
-Franciszek\footnote{Józef Franciszek Kowalczyk jest ojcem chrzestnym autora
-niniejszej książki.} (ur.~1953~r.) ożenił się w~1977~roku w~Długiej Kościelnej
-z~córką Stanisława i~Jadwigi Gomulskich, Elżbietą Marią (ur.~1954~r.). Józef
-i~Elżbieta są ze~sobą spokrewnieni -- mają wspólnego przodka Bartłomieja
-Piotrkowicza, dla Józefa jest on~4x~pradziadkiem, a~dla Elżbiety
-5x~pradziadkiem.
+i~Pawła w~Dębem Wielkim z~Aleksandrem Kowalczykiem dwudziestodziewięcioletnim
+kawalerem z~Krzewiny (ur.~1911~r.~-- zm.~1987~r.). Para dochowała się wspólnie
+szóstki synów, jeden z~nich Józef Franciszek\footnote{Józef Franciszek
+Kowalczyk jest ojcem chrzestnym autora niniejszej książki.} (ur.~1953~r.)
+ożenił się w~1977~roku w~Długiej Kościelnej z~córką Stanisława i~Jadwigi
+Gomulskich, Elżbietą Marią (ur.~1954~r.). Józef i~Elżbieta Kowalczykowie
+są~ze~sobą bezpośrednio spokrewnieni -- mają wspólnego przodka Bartłomieja
+Piotrkowicza, który dla obojga z~nich jest 5x~pradziadkiem.
 
 \begin{figure}[!ht]
     \vspace*{0.5cm}
@@ -1539,6 +1541,7 @@ Piotrkowicza, dla Józefa jest on~4x~pradziadkiem, a~dla Elżbiety
 \newpage
 \begin{figure}[!ht]
 \centering
+\hspace*{0.2cm}
 \begin{tikzpicture}[
   % Definiujemy stałe odstępy
   node distance=1cm and 1cm, 
@@ -1565,7 +1568,7 @@ Piotrkowicza, dla Józefa jest on~4x~pradziadkiem, a~dla Elżbiety
 \begin{figure}[!ht]
 \centering
 % --- PIERWSZY WYKRES ---
-\begin{minipage}[t]{0.48\textwidth}
+\begin{minipage}[t]{0.46\textwidth}
 \centering
 \begin{tikzpicture}[baseline=(Osiowa1.north), scale=0.7, transform shape,
     node distance=1cm and 1cm, 
@@ -1620,44 +1623,60 @@ below=1.5cm of  Slub2] {};
 % --- POKOLENIE 4 ---
 \node (Osiowa4) [draw=none, minimum width=0pt, inner sep=0pt,
 below=1.5cm of  Slub3] {};
-\node (Stanislaw) [left=1.5cm of Osiowa4] {Stanisław Piotrkowicz \\ {
+\node (Jan) [left=1.5cm of Osiowa4] {Jan Piotrkowicz \\ {
+    \footnotesize \emph{Kąty Goździejewskie, 1847 r.}}};
+\node (Krystyna) [right=1.5cm of Osiowa4] {Krystyna Link \\ {
+    \footnotesize \emph{Kąty Mrowiskie, 1845 r.}}};
+
+\draw[-] (Jan) -- (Krystyna)
+    node[midway, above, draw=none, minimum width=0pt,
+    font=\scriptsize] (Slub4_Gora) { }
+    node[midway, below, draw=none, minimum width=0pt,
+    font=\scriptsize] (Slub4) {\emph{Pustelnik, 1871 r.}};
+
+\draw[->] (Slub3) -- (Slub4_Gora);
+
+% --- POKOLENIE 5 ---
+\node (Osiowa5) [draw=none, minimum width=0pt, inner sep=0pt,
+below=1.5cm of  Slub4] {};
+\node (Stanislaw) [left=1.5cm of Osiowa5] {Stanisław Piotrkowicz \\ {
     \footnotesize \emph{Olesin, 1883 r.}}};
-\node (Balbina) [right=1.5cm of Osiowa4] {Balbina Główka \\ {
+\node (Balbina) [right=1.5cm of Osiowa5] {Balbina Główka \\ {
     \footnotesize \emph{Kąty Goździejewskie, 1891 r.}}};
 
 \draw[-] (Stanislaw) -- (Balbina)
     node[midway, above, draw=none, minimum width=0pt,
-    font=\scriptsize] (Slub4_Gora) { }
+    font=\scriptsize] (Slub5_Gora) { }
     node[midway, below, draw=none, minimum width=0pt,
-    font=\scriptsize] (Slub4) {\emph{Pustelnik, 1908 r.}};
+    font=\scriptsize] (Slub5) {\emph{Pustelnik, 1908 r.}};
 
-\draw[->] (Slub3) -- (Slub4_Gora);
+\draw[->] (Slub4) -- (Slub5_Gora);
 
-% --- POKOLENIE 4 ---
-\node (Osiowa5) [draw=none, minimum width=0pt, inner sep=0pt,
-below=1.5cm of  Slub4] {};
-\node (Stanislawa) [left=1.5cm of Osiowa5] {
+% --- POKOLENIE 6 ---
+\node (Osiowa6) [draw=none, minimum width=0pt, inner sep=0pt,
+below=1.5cm of  Slub5] {};
+\node (Stanislawa) [left=1.5cm of Osiowa6] {
     Stanisława Magdalena \\ Piotrkowicz \\ {\footnotesize \emph{
         Olesin, 1917 r.}}};
-\node (Aleksander) [right=1.5cm of Osiowa5] {Aleksander Kowalczyk \\ {
+\node (Aleksander) [right=1.5cm of Osiowa6] {Aleksander Kowalczyk \\ {
     \footnotesize \emph{Krzewina, 1911 r.}}};
 
 \draw[-] (Stanislawa) -- (Aleksander)
     node[midway, above, draw=none, minimum width=0pt,
-    font=\scriptsize] (Slub5_Gora) { }
+    font=\scriptsize] (Slub6_Gora) { }
     node[midway, below, draw=none, minimum width=0pt,
-    font=\scriptsize] (Slub5) {\emph{Dębe Wielkie, 1940 r.}};
+    font=\scriptsize] (Slub6) {\emph{Dębe Wielkie, 1940 r.}};
 
-\draw[->] (Slub4) -- (Slub5_Gora);
+\draw[->] (Slub5) -- (Slub6_Gora);
 
 % STRZAŁKA W DÓŁ
-\draw[->] (Slub5.south) -- ++(0,-1.2);
+\draw[->] (Slub6.south) -- ++(0,-1.2);
     
 \end{tikzpicture}
 \end{minipage}
 \hfill % Doda elastyczny odstęp między wykresami
 % --- DRUGI WYKRES ---
-\begin{minipage}[t]{0.48\textwidth}
+\begin{minipage}[t]{0.46\textwidth}
 \centering
 \begin{tikzpicture}[baseline=(Osiowa2.north), scale=0.7, transform shape,
     node distance=1cm and 1cm, 
@@ -1766,9 +1785,10 @@ below=1.5cm of Slub6] {};
 
 \begin{figure}[!ht]
 \centering
+\hspace*{0.7cm}
 \begin{tikzpicture}[
   % Definiujemy stałe odstępy
-  node distance=1cm and 1cm, 
+  node distance=1cm and 1cm,
   every node/.style={draw, rectangle, align=center, minimum width=3.8cm,
   inner sep=5pt}]
 
