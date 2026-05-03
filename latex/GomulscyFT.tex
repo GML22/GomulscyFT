@@ -96,7 +96,19 @@ bindingoffset=6mm, nohyphenation=false]{Pakiety/thesis}
 % Załączniki
 %-----------------------------------------------------------------------------
 \cleardoublepage
-\input{Zalaczniki/Zalaczniki}
+
+% Tworzymy nazwę rozdziału z załącznikami
+\chapter*{Załączniki}
+
+% Czyścimy nagłówki i stopki w~załącznikach
+\markboth{}{}{}
+
+% Dodajemy poszczególne załączniki I-V
+\input{Zalaczniki/Zalacznik_I}
+\input{Zalaczniki/Zalacznik_II}
+\input{Zalaczniki/Zalacznik_III}
+\input{Zalaczniki/Zalacznik_IV}
+\input{Zalaczniki/Zalacznik_V}
 
 %-----------------------------------------------------------------------------
 % Tylna okładka
