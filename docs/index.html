@@ -32,7 +32,7 @@
         const viewerPath = "pdfjs/web/viewer.html";
         
         // 3. Łączymy to w całość
-        const finalUrl = `${viewerPath}?file=${encodeURIComponent('../../' + pdfFileName)}#sidebar=0`;
+        const finalUrl = `${viewerPath}?file=${encodeURIComponent('../../' + pdfFileName)}#pagemode=none`;
         
         document.getElementById("pdf-viewer").src = finalUrl;
     </script>
