@@ -5,7 +5,7 @@ $GhostscriptPath = "C:\Program Files\gs\gs10.03.0\bin\gswin64c.exe"
 $InputPDF = "\\192.168.0.112\home\Mateusz\Genealogia\Gomulscy\GomulscyFT\latex\GomulscyFT.pdf"
 
 # Compressed Output file path
-$OutputFile = "\\192.168.0.112\home\Mateusz\Genealogia\Gomulscy\GomulscyFT\Historia rodziny Gomulskich z Desna.pdf"
+$OutputFile = "\\192.168.0.112\home\Mateusz\Genealogia\Gomulscy\GomulscyFT\Historia_rodziny_Gomulskich_z_Desna.pdf"
 
 # Arguments for PDF
 $ArgumentsPDF = @("-dNOPAUSE", "-dQUIET", "-dBATCH", "-sDEVICE=pdfwrite", "-dCompatibilityLevel=1.5", "-dPDFSETTINGS=/ebook", "-dDetectDuplicateImages=true", "-dEmbedAllFonts=true", "-dSubsetFonts=true", "-o `"$OutputFile`"", "-f `"$InputPDF`"")
