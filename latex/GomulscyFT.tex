@@ -3,32 +3,39 @@
 %%%%%%%%%%%%%%%                Mateusz Gomulski               %%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% Konfigurujemy klasę dokumentu
+%-----------------------------------------------------------------------------
+% Podstawowa konfiguracja dokumentu
+%-----------------------------------------------------------------------------
+
+% Definiujemy klasę dokumentu i adres do pliku z preambułą
 \documentclass[left=2.5cm, right=2.5cm, top=2.5cm, bottom=3cm, 
-bindingoffset=6mm, nohyphenation=false]{Pakiety/thesis}
+bindingoffset=6mm, nohyphenation=false]{Preambuła/Preambula}
 
-% Definiujemy język i ścieżkę do obrazów
+% Definiujemy język dokumentu
 \langpol
-\graphicspath{{Obrazy//}}
 
-% Dodajemy bibliografię
-\addbibresource{Bibliografia//bibliografia.bib}
-
-% Konfigurujemy stronę tytułową
+% Definiujemy tytuł książki
 \title{\Huge{\textbf{Historia rodziny Gomulskich z~Desna}}}
+
+% Definiujemy autora książki
 \author{Mateusz Gomulski}
+
+% Definiujemy logo i bieżącą datę edycji książki
 \date{\vfill \includegraphics[width=0.15\textwidth]{GML_LOGO5_black4.png}\\
 \large{\miesiacrok}}
 
-% Rozpoczynamy dokument
-\begin{document}
+% Definiujemy adres pliku z bibliografią
+\addbibresource{Bibliografia//bibliografia.bib}
+
+% Definiujemy ścieżkę do folderu, gdzie będziemy przechowywać wszystkie
+% obrazy wykorzystywane wewnątrz książki
+\graphicspath{{Źródła//}}
 
 %-----------------------------------------------------------------------------
 % Przednia okładka
 %-----------------------------------------------------------------------------
+\begin{document}
 \includepdf{Gomulscy_okladka_front.png}
-
-% Dodajemy pustą stronę
 \cleardoublepage
 
 %-----------------------------------------------------------------------------
@@ -38,15 +45,10 @@ bindingoffset=6mm, nohyphenation=false]{Pakiety/thesis}
 \setcounter{page}{1}
 \maketitle
 
-% Dodajemy pustą stronę
-\cleardoublepage
-\begin{center}
-	\thispagestyle{empty}
-    \vspace*{3cm}
-    \Large{Pamięci babci Jadzi i~dziadka Staśka Gomulskich \\ 
-    Niech spoczywają w~pokoju wiecznym \\ Amen ~\CrossOpenShadow}
-    \vfill
-\end{center}
+%-----------------------------------------------------------------------------
+% Dedykacja
+%-----------------------------------------------------------------------------
+\input{Dedykacja/Dedykacja}
 
 %-----------------------------------------------------------------------------
 % Spis treści
@@ -55,38 +57,36 @@ bindingoffset=6mm, nohyphenation=false]{Pakiety/thesis}
 \tableofcontents
 
 %-----------------------------------------------------------------------------
+% Przedmowy
+%-----------------------------------------------------------------------------
+\input{Przedmowy/Przedmowy}
+
+%-----------------------------------------------------------------------------
 % Rozdziały
 %-----------------------------------------------------------------------------
 
-% Wstęp
-\cleardoublepage
-\input{Przedmowy/Przedmowy}
-% Rozdziały I
-\cleardoublepage
-\input{Rozdzial_I/Rozdzial_I}
+% Rozdział I
+\input{Rozdziały/Rozdzial_I}
 
-% Rozdziały II
-\cleardoublepage
-\input{Rozdzial_II/Rozdzial_II}
+% Rozdział II
+\input{Rozdziały/Rozdzial_II}
 
-% Rozdziały III
-\cleardoublepage
-\input{Rozdzial_III/Rozdzial_III}
+% Rozdział III
+\input{Rozdziały/Rozdzial_III}
 
-% Rozdziały IV
-\cleardoublepage
-\input{Rozdzial_IV/Rozdzial_IV}
+% Rozdział IV
+\input{Rozdziały/Rozdzial_IV}
 
-% Rozdziały V
-\cleardoublepage
-\input{Rozdzial_V/Rozdzial_V}
+% Rozdział V
+\input{Rozdziały/Rozdzial_V}
 
-% Zakończenie
-\cleardoublepage
+%-----------------------------------------------------------------------------
+% Posłowia
+%-----------------------------------------------------------------------------
 \input{Posłowia/Posłowia}
                            
 %-----------------------------------------------------------------------------
-% Literatura
+% Bibliografia
 %-----------------------------------------------------------------------------
 \cleardoublepage
 \newrefcontext[sorting=nty]
@@ -95,25 +95,38 @@ bindingoffset=6mm, nohyphenation=false]{Pakiety/thesis}
 %-----------------------------------------------------------------------------
 % Załączniki
 %-----------------------------------------------------------------------------
-\cleardoublepage
 
-% Tworzymy nazwę rozdziału z załącznikami
-\chapter*{Załączniki}
+% Załącznik I
+\input{Załączniki/Zalacznik_I}
 
-% Czyścimy nagłówki i stopki w~załącznikach
-\markboth{}{}{}
+% Załącznik II
+\input{Załączniki/Zalacznik_II}
 
-% Dodajemy poszczególne załączniki I-V
-\input{Zalaczniki/Zalacznik_I}
-\input{Zalaczniki/Zalacznik_II}
-\input{Zalaczniki/Zalacznik_III}
-\input{Zalaczniki/Zalacznik_IV}
-\input{Zalaczniki/Zalacznik_V}
+% Załącznik III
+\input{Załączniki/Zalacznik_III}
+
+% Załącznik IV
+\input{Załączniki/Zalacznik_IV}
+
+% Załącznik V
+\input{Załączniki/Zalacznik_V}
+
+%-----------------------------------------------------------------------------
+% Podziękowania
+%-----------------------------------------------------------------------------
+\input{Podziękowania/Podziekowania}
 
 %-----------------------------------------------------------------------------
 % Tylna okładka
 %-----------------------------------------------------------------------------
+\cleardoublepage
+\thispagestyle{empty}
+\hbox{}
+\newpage
 \includepdf{Gomulscy_okladka_back.png}
-
-% Zamykamy dokument
 \end{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
