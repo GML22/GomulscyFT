@@ -1178,14 +1178,74 @@ przykłady niektórych z~ich nagrobków.
 \end{figure}
 
 \begin{figure}[!ht]
-    \vspace*{0.4cm}
-    \centering \includegraphics[width=0.75\linewidth]{
-        2007_Józefa_Ładno_Gomulska_zdjęcie_nagrobka_cmentarz_Długa_Kościelna.jpg}
-    \captionsetup{format=hang}
-    \caption{Zdjęcie grobu małżonków Franciszka oraz~Józefy Ładno oraz ich
-    córek, znajdującego się na cmentarzu parafialnym parafii św. Anny
-    w~Długiej Kościelnej (sektor: A3, rząd: 6, numer: 19)}
-    \label{fig:jgomulska_2007}
+\vspace*{0.5cm}
+\centering
+\begin{tikzpicture}[
+  % Definiujemy stałe odstępy
+  node distance=1cm and 1cm, 
+  every node/.style={draw, rectangle, align=center, minimum width=3.8cm,
+  inner sep=5pt}]
+
+% --- POKOLENIE 0 ---
+\node (Osiowa0) [draw=none, minimum width=0pt, inner sep=0pt] at (0,0) {};
+\node (Antoni) [left=1.5cm of Osiowa0] {Antoni Gomoła \\ {
+    \footnotesize \emph{Wnętrzne, 1764 r.}}};
+\node (Petronella) [right=1.5cm of Osiowa0] {Petronella Sokół \\ {
+    \footnotesize \emph{Mysłów, 1768 r.}}};
+
+\draw[-] (Antoni) -- (Petronella)
+    node[midway, below, draw=none, minimum width=0pt,
+    font=\scriptsize] (Slub0) {\emph{Wilczyska, 1783 r.}};
+
+% --- POKOLENIE 1 ---
+\node (Osiowa1) [draw=none, minimum width=0pt, inner sep=0pt,
+below=1.5cm of Slub0] {};
+\node (Jan) [left=1.5cm of Osiowa1] {Jan Gomoła \\ {
+    \footnotesize \emph{Mysłów, 1789 r.}}};
+\node (Łucja) [right=1.5cm of Osiowa1] {Łucja Rokicka \\ {
+    \footnotesize \emph{Rudzienko, 1790 r.}}};
+
+\draw[-] (Jan) -- (Łucja)
+    node[midway, above, draw=none, minimum width=0pt,
+    font=\scriptsize] (Slub1_Gora) { }
+    node[midway, below, draw=none, minimum width=0pt,
+    font=\scriptsize] (Slub1) {\emph{Kołbiel, 1814 r.}};
+
+\draw[->] (Slub0) -- (Slub1_Gora);
+
+% --- POKOLENIE 2 ---
+\node (Osiowa2) [draw=none, minimum width=0pt, inner sep=0pt,
+below=1.5cm of Slub1] {};
+\node (Piotr) [left=1.5cm of Osiowa2] {Piotr Franciszek Gumulski \\ {
+    \footnotesize \emph{Rudzienko, 1815 r.}}};
+\node (Marianna) [right=1.5cm of Osiowa2] {Marianna Chłopik \\ {
+    \footnotesize \emph{Zamienie, 1819 r.}}};
+    
+\draw[-] (Piotr) -- (Marianna)
+    node[midway, above, draw=none, minimum width=0pt,
+    font=\scriptsize] (Slub2_Gora) { }
+    node[midway, below, draw=none, minimum width=0pt,
+    font=\scriptsize] (Slub2) {\emph{Mińsk, 1835 r.}};
+
+\draw[->] (Slub1) -- (Slub2_Gora);
+
+% --- POKOLENIE 3 ---
+\node (Osiowa3) [draw=none, minimum width=0pt, inner sep=0pt,
+below=1.5cm of  Slub2] {};
+\node (Michał) [left=1.5cm of Osiowa3] {Michał Gomulski \\ {
+    \footnotesize \emph{Anielina, 1859 r.}}};
+\node (Marianna2) [right=1.5cm of Osiowa3] {Marianna Wróbel \\ {
+    \footnotesize \emph{Siennica, 1860 r.}}};
+
+\draw[-] (Michał) -- (Marianna2)
+    node[midway, above, draw=none, minimum width=0pt,
+    font=\scriptsize] (Slub3_Gora) { }
+    node[midway, below, draw=none, minimum width=0pt,
+    font=\scriptsize] (Slub3) {\emph{Mińsk, 1881 r.}};
+
+\draw[->] (Slub2) -- (Slub3_Gora);
+
+\end{tikzpicture}
 \end{figure}
 
 Bezpośredni potomkowie Michała i~Marianny Gomulskich, mieszkają na terenie
@@ -1488,6 +1548,77 @@ podrozdziału poświęconego Anielinie.}.
     na cmentarzu parafialnym parafii św. Anny w~Długiej Kościelnej (sektor:
     A3, rząd: 1, numer: 28)}
     \label{fig:mlewinska_2012}
+\end{figure}
+
+\begin{figure}[!ht]
+\vspace*{0.5cm}
+\centering
+\begin{tikzpicture}[
+  % Definiujemy stałe odstępy
+  node distance=1cm and 1cm, 
+  every node/.style={draw, rectangle, align=center, minimum width=3.8cm,
+  inner sep=5pt}]
+
+% --- POKOLENIE 0 ---
+\node (Osiowa0) [draw=none, minimum width=0pt, inner sep=0pt] at (0,0) {};
+\node (Antoni) [left=1.5cm of Osiowa0] {Antoni Gomoła \\ {
+    \footnotesize \emph{Wnętrzne, 1764 r.}}};
+\node (Petronella) [right=1.5cm of Osiowa0] {Petronella Sokół \\ {
+    \footnotesize \emph{Mysłów, 1768 r.}}};
+
+\draw[-] (Antoni) -- (Petronella)
+    node[midway, below, draw=none, minimum width=0pt,
+    font=\scriptsize] (Slub0) {\emph{Wilczyska, 1783 r.}};
+
+% --- POKOLENIE 1 ---
+\node (Osiowa1) [draw=none, minimum width=0pt, inner sep=0pt,
+below=1.5cm of Slub0] {};
+\node (Jan) [left=1.5cm of Osiowa1] {Jan Gomoła \\ {
+    \footnotesize \emph{Mysłów, 1789 r.}}};
+\node (Łucja) [right=1.5cm of Osiowa1] {Łucja Rokicka \\ {
+    \footnotesize \emph{Rudzienko, 1790 r.}}};
+
+\draw[-] (Jan) -- (Łucja)
+    node[midway, above, draw=none, minimum width=0pt,
+    font=\scriptsize] (Slub1_Gora) { }
+    node[midway, below, draw=none, minimum width=0pt,
+    font=\scriptsize] (Slub1) {\emph{Kołbiel, 1814 r.}};
+
+\draw[->] (Slub0) -- (Slub1_Gora);
+
+% --- POKOLENIE 2 ---
+\node (Osiowa2) [draw=none, minimum width=0pt, inner sep=0pt,
+below=1.5cm of Slub1] {};
+\node (Piotr) [left=1.5cm of Osiowa2] {Piotr Franciszek Gumulski \\ {
+    \footnotesize \emph{Rudzienko, 1815 r.}}};
+\node (Marianna) [right=1.5cm of Osiowa2] {Marianna Chłopik \\ {
+    \footnotesize \emph{Zamienie, 1819 r.}}};
+    
+\draw[-] (Piotr) -- (Marianna)
+    node[midway, above, draw=none, minimum width=0pt,
+    font=\scriptsize] (Slub2_Gora) { }
+    node[midway, below, draw=none, minimum width=0pt,
+    font=\scriptsize] (Slub2) {\emph{Mińsk, 1835 r.}};
+
+\draw[->] (Slub1) -- (Slub2_Gora);
+
+% --- POKOLENIE 3 ---
+\node (Osiowa3) [draw=none, minimum width=0pt, inner sep=0pt,
+below=1.5cm of  Slub2] {};
+\node (Stanislaw) [left=1.5cm of Osiowa3] {Stanisław Gomulski \\ {
+    \footnotesize \emph{Anielina, 1863 r.}}};
+\node (Elzbieta) [right=1.5cm of Osiowa3] {Elżbieta Brodzińska \\ {
+    \footnotesize \emph{Grębiszew, 1857 r.}}};
+
+\draw[-] (Stanislaw) -- (Elzbieta)
+    node[midway, above, draw=none, minimum width=0pt,
+    font=\scriptsize] (Slub3_Gora) { }
+    node[midway, below, draw=none, minimum width=0pt,
+    font=\scriptsize] (Slub3) {\emph{Mińsk, 1882 r.}};
+
+\draw[->] (Slub2) -- (Slub3_Gora);
+
+\end{tikzpicture}
 \end{figure}
 
 Stanisław Gomulski zmarł 15~grudnia 1929~roku, w~wieku 66 lat, w~Anielinie,
@@ -2084,8 +2215,9 @@ Większość potomków rodziny Stanisława i~Julianny Gomulskich spoczywa
 prawdopodobnie na terenie cmentarza w~Długiej Kościelnej, gdyż ich dzieci nie
 wyprowadziły się zbyt daleko od rodzinnej miejscowości. Ryciny:
 \ref{fig:jgomulski_1974}, \ref{fig:tgomulski_2008}, \ref{fig:wgomulski_1986},
-\ref{fig:agomulski_2011}, \ref{fig:zgomulski_2003} oraz
-\ref{fig:sgomulski_2014}, przedstawiają przykłady niektórych z~ich nagrobków.
+\ref{fig:agomulski_2011}, \ref{fig:zgomulski_2003}, \ref{fig:szgomulski_1959}
+oraz \ref{fig:sgomulski_2014} przedstawiają przykłady niektórych z~ich
+nagrobków.
 
 \begin{figure}[!ht]
     \vspace*{0.4cm}
@@ -2133,13 +2265,111 @@ wyprowadziły się zbyt daleko od rodzinnej miejscowości. Ryciny:
 
 \begin{figure}[!ht]
     \vspace*{0.4cm}
-    \centering \includegraphics[width=0.85\linewidth]{
+    \centering \includegraphics[width=0.77\linewidth]{
+       1959_Szczepan_Gomulski_zdjęcie_nagrobka_cmentarz_Długa_Kościelna.jpg}
+    \captionsetup{format=hang}
+    \caption{Zdjęcie grobu małżonków Szczepana oraz Władysławy Barbary
+    Gomulskich, znajdującego się na~cmentarzu parafialnym parafii św.~Anny
+    w~Długiej Kościelnej (sektor: A5, rząd: 2, numer: 13)}
+    \label{fig:szgomulski_1959}
+\end{figure}
+
+\begin{figure}[!ht]
+    \vspace*{0.4cm}
+    \centering \includegraphics[width=0.77\linewidth]{
        2014_Stanisław_Gomulski_Jadwiga_Poziemska_zdjęcie_nagrobka1_cmentarz_Długa_Kościelna.jpg}
     \captionsetup{format=hang}
     \caption{Zdjęcie grobu małżonków Stanisława oraz Jadwigi Gomulskich,
     znajdującego się na cmentarzu parafialnym parafii św. Anny w~Długiej
     Kościelnej (sektor: A6, rząd: 7, numer: 19)}
     \label{fig:sgomulski_2014}
+\end{figure}
+
+\begin{figure}[!ht]
+\vspace*{0.5cm}
+\centering
+\begin{tikzpicture}[
+  % Definiujemy stałe odstępy
+  node distance=1cm and 1cm, 
+  every node/.style={draw, rectangle, align=center, minimum width=3.8cm,
+  inner sep=5pt}]
+
+% --- POKOLENIE 0 ---
+\node (Osiowa0) [draw=none, minimum width=0pt, inner sep=0pt] at (0,0) {};
+\node (Antoni) [left=1.5cm of Osiowa0] {Antoni Gomoła \\ {
+    \footnotesize \emph{Wnętrzne, 1764 r.}}};
+\node (Petronella) [right=1.5cm of Osiowa0] {Petronella Sokół \\ {
+    \footnotesize \emph{Mysłów, 1768 r.}}};
+
+\draw[-] (Antoni) -- (Petronella)
+    node[midway, below, draw=none, minimum width=0pt,
+    font=\scriptsize] (Slub0) {\emph{Wilczyska, 1783 r.}};
+
+% --- POKOLENIE 1 ---
+\node (Osiowa1) [draw=none, minimum width=0pt, inner sep=0pt,
+below=1.5cm of Slub0] {};
+\node (Jan) [left=1.5cm of Osiowa1] {Jan Gomoła \\ {
+    \footnotesize \emph{Mysłów, 1789 r.}}};
+\node (Łucja) [right=1.5cm of Osiowa1] {Łucja Rokicka \\ {
+    \footnotesize \emph{Rudzienko, 1790 r.}}};
+
+\draw[-] (Jan) -- (Łucja)
+    node[midway, above, draw=none, minimum width=0pt,
+    font=\scriptsize] (Slub1_Gora) { }
+    node[midway, below, draw=none, minimum width=0pt,
+    font=\scriptsize] (Slub1) {\emph{Kołbiel, 1814 r.}};
+
+\draw[->] (Slub0) -- (Slub1_Gora);
+
+% --- POKOLENIE 2 ---
+\node (Osiowa2) [draw=none, minimum width=0pt, inner sep=0pt,
+below=1.5cm of Slub1] {};
+\node (Piotr) [left=1.5cm of Osiowa2] {Piotr Franciszek Gumulski \\ {
+    \footnotesize \emph{Rudzienko, 1815 r.}}};
+\node (Marianna) [right=1.5cm of Osiowa2] {Marianna Chłopik \\ {
+    \footnotesize \emph{Zamienie, 1819 r.}}};
+    
+\draw[-] (Piotr) -- (Marianna)
+    node[midway, above, draw=none, minimum width=0pt,
+    font=\scriptsize] (Slub2_Gora) { }
+    node[midway, below, draw=none, minimum width=0pt,
+    font=\scriptsize] (Slub2) {\emph{Mińsk, 1835 r.}};
+
+\draw[->] (Slub1) -- (Slub2_Gora);
+
+% --- POKOLENIE 3 ---
+\node (Osiowa3) [draw=none, minimum width=0pt, inner sep=0pt,
+below=1.5cm of  Slub2] {};
+\node (Jan2) [left=1.5cm of Osiowa3] {Jan Gomulski \\ {
+    \footnotesize \emph{Zamienie, 1836 r.}}};
+\node (Agnieszka) [right=1.5cm of Osiowa3] {Agnieszka Piotrkowicz \\ {
+    \footnotesize \emph{Budy Barcząckie, 1840 r.}}};
+
+\draw[-] (Jan2) -- (Agnieszka)
+    node[midway, above, draw=none, minimum width=0pt,
+    font=\scriptsize] (Slub3_Gora) { }
+    node[midway, below, draw=none, minimum width=0pt,
+    font=\scriptsize] (Slub3) {\emph{Mińsk, 1858 r.}};
+
+\draw[->] (Slub2) -- (Slub3_Gora);
+
+% --- POKOLENIE 4 ---
+\node (Osiowa4) [draw=none, minimum width=0pt, inner sep=0pt,
+below=1.5cm of  Slub3] {};
+\node (Stanislaw) [left=1.5cm of Osiowa4] {Stanisław Gomulski \\ {
+    \footnotesize \emph{Wólka Mińska, 1861 r.}}};
+\node (Julianna) [right=1.5cm of Osiowa4] {Julianna Gągol \\ {
+    \footnotesize \emph{Dłużka, 1862 r.}}};
+
+\draw[-] (Stanislaw) -- (Julianna)
+    node[midway, above, draw=none, minimum width=0pt,
+    font=\scriptsize] (Slub4_Gora) { }
+    node[midway, below, draw=none, minimum width=0pt,
+    font=\scriptsize] (Slub4) {\emph{Mińsk, 1881 r.}};
+
+\draw[->] (Slub3) -- (Slub4_Gora);
+
+\end{tikzpicture}
 \end{figure}
 
 Bezpośredni potomkowie Stanisława i~Julianny Gomulskich, mieszkają na terenie
