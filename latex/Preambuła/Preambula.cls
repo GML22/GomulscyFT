@@ -53,6 +53,8 @@
 \RequirePackage{microtype} % Pakiet do lepszego zarządzania odległością słów
 \RequirePackage{fontspec}
 \RequirePackage{tikz}
+\RequirePackage{imakeidx}
+\RequirePackage{xstring}
 
 % Definiujemy czcionkę
 \setmainfont{TeX Gyre Pagella}
@@ -347,3 +349,17 @@
 
 % Ustawienia diagramów tikz
 \usetikzlibrary{arrows.meta, positioning, calc}
+
+% Indeks osób
+\makeindex[name=osoby, title={Indeks osób}, columns=1, options=-s
+"Preambuła/indeks_osob_style.ist"]
+
+% Indeks miejscowości
+\makeindex[name=miejsca, title={Indeks miejscowości},
+columns=1, options=-s "Preambuła/indeks_miejscowosci_style.ist"]
+
+% Definicja uniwersalnej komendy indeksującej
+\NewDocumentCommand{\indeksosoby}{o o m m m m}{%
+    \index[osoby]{#4@\protect\normalsize\textbf{#4}!#3\IfValueT{#1}{, z d. #1}\IfValueT{#2}{, $1^{\circ}$ v. #2}, ur. #5, #6}%
+    \index[miejsca]{#6@\protect\normalsize\textbf{#6}!#4\IfValueT{#1}{(z d. #1)}\IfValueT{#2}{, $1^{\circ}$ v. #2}, #3 (ur. #5)}%
+}

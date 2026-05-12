@@ -25,7 +25,7 @@ bindingoffset=6mm, nohyphenation=false]{Preambuła/Preambula}
 \large{\miesiacrok}}
 
 % Definiujemy adres pliku z bibliografią
-\addbibresource{Bibliografia//bibliografia.bib}
+\addbibresource{Bibliografia//Bibliografia.bib}
 
 % Definiujemy ścieżkę do folderu, gdzie będziemy przechowywać wszystkie
 % obrazy wykorzystywane wewnątrz książki
@@ -54,6 +54,7 @@ bindingoffset=6mm, nohyphenation=false]{Preambuła/Preambula}
 % Spis treści
 %-----------------------------------------------------------------------------
 \cleardoublepage
+\vspace*{-3\baselineskip}
 \tableofcontents
 
 %-----------------------------------------------------------------------------
@@ -86,13 +87,6 @@ bindingoffset=6mm, nohyphenation=false]{Preambuła/Preambula}
 \input{Posłowia/Posłowia}
                            
 %-----------------------------------------------------------------------------
-% Bibliografia
-%-----------------------------------------------------------------------------
-\cleardoublepage
-\newrefcontext[sorting=nty]
-\printbibliography
-
-%-----------------------------------------------------------------------------
 % Załączniki
 %-----------------------------------------------------------------------------
 
@@ -112,9 +106,22 @@ bindingoffset=6mm, nohyphenation=false]{Preambuła/Preambula}
 \input{Załączniki/Zalacznik_V}
 
 %-----------------------------------------------------------------------------
+% Bibliografia
+%-----------------------------------------------------------------------------
+\cleardoublepage
+\newrefcontext[sorting=nty]
+\printbibliography
+
+%-----------------------------------------------------------------------------
 % Podziękowania
 %-----------------------------------------------------------------------------
 \input{Podziękowania/Podziekowania}
+
+%-----------------------------------------------------------------------------
+% Indeksy
+%-----------------------------------------------------------------------------
+\printindex[osoby]
+\printindex[miejsca]
 
 %-----------------------------------------------------------------------------
 % Tylna okładka
