@@ -55,6 +55,7 @@
 \RequirePackage{tikz}
 \RequirePackage{imakeidx}
 \RequirePackage{xstring}
+\RequirePackage{etoolbox}
 
 % Definiujemy czcionkę
 \setmainfont{TeX Gyre Pagella}
@@ -358,8 +359,22 @@
 \makeindex[name=miejsca, title={Indeks miejscowości},
 columns=1, options=-s "Preambuła/indeks_miejscowosci_style.ist"]
 
-% Definicja uniwersalnej komendy indeksującej
-\NewDocumentCommand{\indeksosoby}{o o m m m m}{%
-    \index[osoby]{#4@\protect\normalsize\textbf{#4}!#3\IfValueT{#1}{, z d. #1}\IfValueT{#2}{, $1^{\circ}$ v. #2}, ur. #5, #6}%
-    \index[miejsca]{#6@\protect\normalsize\textbf{#6}!#4\IfValueT{#1}{(z d. #1)}\IfValueT{#2}{, $1^{\circ}$ v. #2}, #3 (ur. #5)}%
+% Definicja makra do indeksowania osób i miejscowości:
+% #1 - z d. (opcjonalny)
+% #2 - 1 v. (opcjonalny)
+% #3 - Imię (obowiązkowy)
+% #4 - Nazwisko wyświetlane (obowiązkowy)
+% #5 - Rok urodzenia (obowiązkowy)
+% #6 - Miejsce urodzenia wyświetlane (obowiązkowy)
+% #7 - Klucz sortowania nazwiska (opcjonalny - w [ ] na końcu)
+% #8 - Klucz sortowania miejscowości (opcjonalny - w [ ] na samym końcu)
+\NewDocumentCommand{\indeksosoby}{o o m m m m o o}{%
+    \IfNoValueTF{#7}{\def\kluczsortnazw{#4}}{\def\kluczsortnazw{#7}}%
+    \IfNoValueTF{#8}{\def\kluczsortmiejsc{#6}}{\def\kluczsortmiejsc{#8}}%
+    %
+    % Ochrona przed łamaniem strony po nazwisku (w indeksie osób)
+    \index[osoby]{\kluczsortnazw @\protect\normalsize\textbf{#4}\protect\nopagebreak!#3\IfValueT{#1}{, z d. #1}\IfValueT{#2}{, $1^{\circ}$ v. #2}, ur. #5, #6}%
+    %
+    % Ochrona przed łamaniem strony po miejscowości (w indeksie miejsc)
+    \index[miejsca]{\kluczsortmiejsc @\protect\normalsize\textbf{#6}\protect\nopagebreak!#4\IfValueT{#1}{(z d. #1)}\IfValueT{#2}{, $1^{\circ}$ v. #2}, #3 (ur. #5)}%
 }
