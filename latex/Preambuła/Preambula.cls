@@ -369,8 +369,8 @@ columns=1, options=-s "Preambuła/indeks_miejscowosci_style.ist"]
 % #7 - Klucz sortowania nazwiska (opcjonalny - w [ ] na końcu)
 % #8 - Klucz sortowania miejscowości (opcjonalny - w [ ] na samym końcu)
 \NewDocumentCommand{\indeksosoby}{o o m m m m o o}{%
-    \IfNoValueTF{#7}{\def\kluczsortnazw{#4}}{\def\kluczsortnazw{#7}}%
-    \IfNoValueTF{#8}{\def\kluczsortmiejsc{#6}}{\def\kluczsortmiejsc{#8}}%
+    \IfNoValueTF{#7}{\protected@edef\kluczsortnazw{#4}}{\protected@edef\kluczsortnazw{#7}}%
+    \IfNoValueTF{#8}{\protected@edef\kluczsortmiejsc{#6}}{\protected@edef\kluczsortmiejsc{#8}}%
     %
     % Ochrona przed łamaniem strony po nazwisku (w indeksie osób)
     \index[osoby]{\kluczsortnazw @\protect\normalsize\textbf{#4}\protect\nopagebreak!#3\IfValueT{#1}{, z d. #1}\IfValueT{#2}{, $1^{\circ}$ v. #2}, ur. #5, #6}%
@@ -378,3 +378,30 @@ columns=1, options=-s "Preambuła/indeks_miejscowosci_style.ist"]
     % Ochrona przed łamaniem strony po miejscowości (w indeksie miejsc)
     \index[miejsca]{\kluczsortmiejsc @\protect\normalsize\textbf{#6}\protect\nopagebreak!#4\IfValueT{#1}{(z d. #1)}\IfValueT{#2}{, $1^{\circ}$ v. #2}, #3 (ur. #5)}%
 }
+
+% Nowe polecenie dla samej flagi Polski
+\DeclareRobustCommand{\flagaPL}{%
+  \begin{tikzpicture}[
+    x=1em/10, y=1em/10,          % Identyczne skalowanie jak w znaku AK
+    baseline=(bottom)
+  ]
+    % 1. Dopasowanie do pełnej wysokości linijki tekstu
+    \path (0,-2) coordinate (bottom) (0,8) coordinate (top);
+    
+    % 2. Tło - Prostokątna flaga Polski (proporcje ok. 8:5)
+    \begin{scope}
+      \clip[rounded corners=0.1em] (-8, -2) rectangle (8, 8);
+      \fill[white] (-8, 3) rectangle (8, 8);
+      \fill[red!85!black] (-8, -2) rectangle (8, 3);
+    \end{scope}
+    \draw[gray!60, line width=0.03em, rounded corners=0.1em] (-8, -2) rectangle (8, 8);
+  \end{tikzpicture}%
+}
+
+% Bezpieczne zastępstwo tekstowe dla indeksów/zakładek (wyświetli tekst "PL")
+\pdfstringdefDisableCommands{%
+  \def\flagaPL{(PL)}%
+}
+
+% Wyłącznienie przedroska 'adr.' w bibliografii
+\DeclareFieldFormat{url}{\url{#1}}
