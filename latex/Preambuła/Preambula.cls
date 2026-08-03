@@ -135,8 +135,13 @@
 \renewcommand\lstlistingname{\large Kod źródłowy}
 \renewcommand\lstlistlistingname{\large Kod źródłowy}
 
-% Ustawienia lettrine
+% Globalne ustawienia dla pakietu lettrine
 \renewcommand{\LettrineTextFont}{\normalfont}
+\setcounter{DefaultLines}{5}          
+\renewcommand{\DefaultLhang}{0}       
+\renewcommand{\DefaultSlope}{0pt}
+\setlength{\DefaultNindent}{0pt}
+\setlength{\DefaultFindent}{5pt}
 
 % Ustawienie interlinii 1.15 w tekście i 1 w trybie matematycznym
 \setstretch{1.2}
