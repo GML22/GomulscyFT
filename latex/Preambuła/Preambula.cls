@@ -339,7 +339,7 @@
   \ifcase\month
   \or styczeń\or luty\or marzec\or kwiecień\or maj\or czerwiec%
   \or lipiec\or sierpień\or wrzesień\or październik\or listopad\or grudzień%
-  \fi\space\number\year\space~r.}
+  \fi\space\number\year~r.}
 
 % Makro do dużego pogrubionego tekstu
 \newcommand{\BigBold}[1]{\par\bigskip\noindent\textbf{\Large #1}\par\smallskip}
