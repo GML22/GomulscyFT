@@ -8,9 +8,7 @@
 
 % Definiujemy parametry klasy
 \RequirePackage{kvoptions}
-\SetupKeyvalOptions{
-    family=Preambuła/Preambula.cls,
-    prefix=preambula}
+\SetupKeyvalOptions{family=Preambuła/Preambula.cls, prefix=preambula}
 
 % Definiujemy marginesy
 \DeclareStringOption[2.5cm]{left}
@@ -26,7 +24,7 @@
 \RequirePackage{amsthm}     % Theorems typesetting
 \RequirePackage{array}      % Advanced table column formats
 \RequirePackage[backend=biber, style=ieee, dashed=false,
-defernumbers=true]{biblatex}
+  defernumbers=true]{biblatex}
 \RequirePackage{csquotes}   % Quotation style
 \RequirePackage{chngcntr}   % Per-section counters
 \RequirePackage{enumitem}   % Itemize/enumrate
@@ -51,13 +49,39 @@ defernumbers=true]{biblatex}
 \RequirePackage[labelfont=bf, textfont=bf]{caption}
 \RequirePackage{xparse}
 \RequirePackage{lettrine}
-\RequirePackage{microtype} % Pakiet do lepszego zarządzania odległością słów
+\RequirePackage{microtype}
 \RequirePackage{fontspec}
 \RequirePackage{tikz}
 \RequirePackage{imakeidx}
 \RequirePackage{xstring}
 \RequirePackage{etoolbox}
+\RequirePackage{hyperref}
+\RequirePackage[parfill]{parskip}
+\RequirePackage[hang]{footmisc}
+\RequirePackage{afterpage}
+\RequirePackage{rotating}
+\RequirePackage[a4paper, left=\preambulaleft, right=\preambularight,
+  top=\preambulatop, bottom=\preambulabottom,
+  bindingoffset=\preambulabindingoffset]{geometry}
 
+% Ustawienia hiperlinków oraz metadanych dokumentu PDF
+\hypersetup{
+  colorlinks=true,
+  citecolor=black,
+  filecolor=black,
+  linkcolor=black,
+  urlcolor=black,
+  pdftitle={Historia rodziny Gomulskich z Desna},
+  pdfauthor={Mateusz Gomulski},
+  pdfsubject={Historia i genealogia rodziny Gomulskich},
+  pdfkeywords={Gomulscy, genealogia, historia rodziny, Desno, Karolina,
+  Anielina, Wólka Mińska, Zamienie, Grzebowilk, Dziewule, Wnętrzne, Mysłów,
+  Rudzienko, Mazowsze, Mińsk Mazowiecki, drzewo genealogiczne},
+  pdflang={pl-PL},
+  pdfdisplaydoctitle=true
+}
+
+% Ustawienie parametrów tytułów rycin
 \captionsetup[figure]{format=hang}
 
 % Definiujemy czcionkę
@@ -99,10 +123,6 @@ defernumbers=true]{biblatex}
 
 % Pakiety dodane przeze mnie
 \newcommand{\upshapeI}[1]{\textrm{\upshape I}}
-\RequirePackage[parfill]{parskip}
-\RequirePackage[hang]{footmisc}
-\RequirePackage{afterpage}
-\RequirePackage{rotating}
 
 % Pusta strona - makro
 \newcommand\blankpage{%
@@ -157,31 +177,10 @@ defernumbers=true]{biblatex}
 \counterwithin{figure}{section}
 \counterwithin{table}{section}
 
-% Ustawienia hyperlinków
-\RequirePackage{hyperref}
-\hypersetup{
-    colorlinks,
-    citecolor=black,
-    filecolor=black,
-    linkcolor=black,
-    urlcolor=black,
-    pdfauthor=author
-}
-
 % Ustalanie tolerancji odnośnie odległości słów
 \tolerance=2000
 \emergencystretch=3em
 \hfuzz=0.2pt
-
-% Ustawienia marginesów
-\RequirePackage[
-    a4paper,
-    left=\preambulaleft,
-    right=\preambularight,
-    top=\preambulatop,
-    bottom=\preambulabottom,
-    bindingoffset=\preambulabindingoffset
-]{geometry}
 
 % Turn off hyphenation
 \ifpreambulanohyphenation
@@ -243,7 +242,6 @@ defernumbers=true]{biblatex}
   \fancyhf{}
   \renewcommand{\headrulewidth}{0pt}
   \renewcommand{\footrulewidth}{0pt}
-  \fancyfoot[LE,RO]{\thepage}
 }
 
 % Przywrócenie oznaczania rozdziałów w nagłówkach
@@ -344,10 +342,7 @@ defernumbers=true]{biblatex}
 
 % Makro do wyświetlania bieżącego miesiąca i roku 2
 \newcommand{\miesiacrokdwa}{%
-  \ifcase\month
-  \or styczeń\or luty\or marzec\or kwiecień\or maj\or czerwiec%
-  \or lipiec\or sierpień\or wrzesień\or październik\or listopad\or grudzień%
-  \fi\space\number\year~r.}
+  wrzesień 2026~r.}
 
 % Makro do dużego pogrubionego tekstu
 \newcommand{\BigBold}[1]{\par\bigskip\noindent\textbf{\Large #1}\par\smallskip}
@@ -368,6 +363,7 @@ defernumbers=true]{biblatex}
 \indexsetup{level={\chapter*}}
 
 \renewcommand{\cftafterloftitle}{%
+  \phantomsection
   \addcontentsline{toc}{chapter}{\listfigurename}}
 
 % Usuwamy podkategorię bibliografii ze spisu treści

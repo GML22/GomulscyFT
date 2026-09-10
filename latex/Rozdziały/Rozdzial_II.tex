@@ -253,11 +253,11 @@ ich młodszy syn Jan.
 \end{figure}
 
 Wracając jednak do~historii Gomolaków we~Wnętrznym~-- 3~lutego 1782~roku
-ma~miejsce ślub Piotra Gomolaka\indeksosoby{Piotr}{Gomolak}{1750}{Wnętrzne}
+miał miejsce ślub Piotra Gomolaka\indeksosoby{Piotr}{Gomolak}{1750}{Wnętrzne}
 oraz Magdaleny Pszczoły\indeksosoby[Pszczoła]{Magdalena}{Gomolak}{?}{Osiny}.
 W~bazie indeksów metrykalnych \emph{Lubgens}, przy wpisie dotyczącym ich
 ślubu, podana jest miejscowość Osiny (prawdopodobnie jest to~rodzinna wieś
-panny młodej), ale nowożeńcy zamieszkują po~ślubie we~Wnętrznym, o~czym
+panny młodej), ale nowożeńcy zamieszkali po~ślubie we~Wnętrznym, o~czym
 świadczą akta chrztu ich licznego potomstwa (patrz: ryc.
 \ref{fig:gomola2_lubgens}). W~aktach chrztu parafii Wilczyska nie da~się
 odnaleźć informacji o~narodzinach Piotra Gomolaka (Gomoły), z~aktu jego zgonu
@@ -493,7 +493,11 @@ chociaż część z~powyższych zagadnień w~kolejnym wydaniu książki.
 
 % Przednia okładka podrozdziału
 \newpage
-\ifodd\value{page}\hbox{}\newpage\fi
+\ifodd\value{page}
+  \thispagestyle{empty}
+  \hbox{}
+  \newpage
+\fi
 
 \includepdf{Mysłów_mapa_fin.png}
 
