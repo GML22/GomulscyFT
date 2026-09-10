@@ -54,8 +54,11 @@ bindingoffset=6mm, nohyphenation=false]{Preambuła/Preambula}
 % Spis treści
 %-----------------------------------------------------------------------------
 \cleardoublepage
-\vspace*{-4\baselineskip}
-\tableofcontents
+\begingroup
+  \setlength{\cftbeforechapskip}{4pt}
+  \setlength{\cftbeforesecskip}{0pt}
+  \tableofcontents
+\endgroup
 
 %-----------------------------------------------------------------------------
 % Przedmowy
@@ -108,9 +111,25 @@ bindingoffset=6mm, nohyphenation=false]{Preambuła/Preambula}
 %-----------------------------------------------------------------------------
 % Bibliografia
 %-----------------------------------------------------------------------------
+
+% Bazowe ustawienia dla bibliografii
 \cleardoublepage
 \newrefcontext[sorting=nty]
-\printbibliography
+\printbibheading[heading=bibliography, title={Bibliografia}]
+
+% Bibliografia dla źródeł archiwalnych i rękopiśmiennych
+\printbibliography[heading=subbibliography, title={Źródła archiwalne
+i~rękopiśmienne}, keyword=archiwalne]
+
+% Bibliografia dla źródeł drukowanych
+\newpage
+\printbibliography[heading=subbibliography, title={Źródła drukowane},
+keyword=drukowane]
+
+% Bibliografia dla opracowań
+\newpage
+\printbibliography[heading=subbibliography, title={Opracowania},
+keyword=opracowania]
 
 %-----------------------------------------------------------------------------
 % Podziękowania
@@ -122,6 +141,17 @@ bindingoffset=6mm, nohyphenation=false]{Preambuła/Preambula}
 %-----------------------------------------------------------------------------
 \printindex[osoby]
 \printindex[miejsca]
+
+%-----------------------------------------------------------------------------
+% Spis rycin
+%-----------------------------------------------------------------------------
+\cleardoublepage
+\begingroup
+\makeatletter
+\renewcommand{\@tocrmarg}{2.55em}
+\makeatother
+\listoffigures
+\endgroup
 
 %-----------------------------------------------------------------------------
 % Tylna okładka

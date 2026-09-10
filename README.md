@@ -33,6 +33,7 @@ Celem projektu jest przedstawienie genealogii rodziny Gomulskich z Desna w świe
 * [Ogólnopolska wyszukiwarka osób pochowanych Grobonet](https://grobonet.com)
 * [Mapa parafii rzymskokatolickich w Polsce](https://www.google.com/maps/d/u/0/viewer?mid=1zwYwcXHsVgUW5cDUiPBnALYGkvE&hl=en_US)
 * [Mapy archiwalne Polski i Europy Środkowej](http://igrek.amzp.pl)
+* [Wojskowe Biuro Historyczne](https://wbh.wp.mil.pl)
 * [Russian Generic Handwriting 2](https://readcoop.eu/model/russian-generic-handwriting)
 * [MyHeritage Family Tree Builder](https://www.myheritage.pl/family-tree-builder)
 * [Inkscape](https://inkscape.org)

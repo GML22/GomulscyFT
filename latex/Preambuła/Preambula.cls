@@ -25,7 +25,8 @@
 \RequirePackage{amsmath}    % Basic mathematical typesetting
 \RequirePackage{amsthm}     % Theorems typesetting
 \RequirePackage{array}      % Advanced table column formats
-\RequirePackage[backend=biber, style=ieee, dashed=false]{biblatex}
+\RequirePackage[backend=biber, style=ieee, dashed=false,
+defernumbers=true]{biblatex}
 \RequirePackage{csquotes}   % Quotation style
 \RequirePackage{chngcntr}   % Per-section counters
 \RequirePackage{enumitem}   % Itemize/enumrate
@@ -56,6 +57,8 @@
 \RequirePackage{imakeidx}
 \RequirePackage{xstring}
 \RequirePackage{etoolbox}
+
+\captionsetup[figure]{format=hang}
 
 % Definiujemy czcionkę
 \setmainfont{TeX Gyre Pagella}
@@ -196,12 +199,11 @@
 \renewcommand{\cftsecleader}{\cftdotfill{\cftsecdotsep}}
 \renewcommand{\cftsecdotsep}{\cftdotsep}
 
-% Ustawienia listy wykresów
-\renewcommand*\l@figure{\@dottedtocline{1}{0.5em}{2.25em}}
-\newcommand{\listoffigurestoc}{
-    \listoffigures
-    \addcontentsline{toc}{section}{\listfigurename}
-}
+% Ustawienie numeracji rysunków
+\renewcommand{\thefigure}{\thechapter.\arabic{figure}}
+
+% Zwiększa szerokość boxu na numer ryciny
+\setlength{\cftfignumwidth}{3em} 
 
 % Ustawienia listy tabel
 \renewcommand*\l@table{\@dottedtocline{1}{0.5em}{2.25em}}
@@ -232,11 +234,17 @@
     \fancyheadoffset{0cm}
     \fancyhead[LE]{\nouppercase{\hfill\leftmark}} % Nazwa rozdziału na stronach parzystych
     \fancyhead[RO]{\nouppercase{\leftmark}} % Nazwa sekcji na stronach nieparzystych
-    \fancyfoot{} % Usuń stopki
-    \fancyfoot[LO]{\thepage} % Numer strony na dole z lewej (nieparzyste)
-    \fancyfoot[RE]{\thepage} % Numer strony na dole z prawej (parzyste)
+    \fancyfoot{}
+    \fancyfoot[LE,RO]{\thepage}
 }
 \pagestyle{headings}
+
+\fancypagestyle{opening}{%
+  \fancyhf{}
+  \renewcommand{\headrulewidth}{0pt}
+  \renewcommand{\footrulewidth}{0pt}
+  \fancyfoot[LE,RO]{\thepage}
+}
 
 % Przywrócenie oznaczania rozdziałów w nagłówkach
 \renewcommand{\chaptermark}[1]{\markboth{#1}{#1}}
@@ -356,6 +364,16 @@
 % Ustawienia diagramów tikz
 \usetikzlibrary{arrows.meta, positioning, calc}
 
+% Ustawienie indeksów
+\indexsetup{level={\chapter*}}
+
+\renewcommand{\cftafterloftitle}{%
+  \addcontentsline{toc}{chapter}{\listfigurename}}
+
+% Usuwamy podkategorię bibliografii ze spisu treści
+\defbibheading{subbibliography}[\refname]{%
+  \tocless{\section*}{#1}}
+
 % Indeks osób
 \makeindex[name=osoby, title={Indeks osób}, columns=1, options=-s
 "Preambuła/indeks_osob_style.ist"]
@@ -381,7 +399,7 @@ columns=1, options=-s "Preambuła/indeks_miejscowosci_style.ist"]
     \index[osoby]{\kluczsortnazw @\protect\normalsize\textbf{#4}\protect\nopagebreak!#3\IfValueT{#1}{, z d. #1}\IfValueT{#2}{, $1^{\circ}$ v. #2}, ur. #5, #6}%
     %
     % Ochrona przed łamaniem strony po miejscowości (w indeksie miejsc)
-    \index[miejsca]{\kluczsortmiejsc @\protect\normalsize\textbf{#6}\protect\nopagebreak!#4\IfValueT{#1}{(z d. #1)}\IfValueT{#2}{, $1^{\circ}$ v. #2}, #3 (ur. #5)}%
+    \index[miejsca]{\kluczsortmiejsc @\protect\normalsize\textbf{#6}\protect\nopagebreak!\kluczsortnazw, #3@#4\IfValueT{#1}{ (z d. #1)}\IfValueT{#2}{, $1^{\circ}$ v. #2}, #3 (ur. #5)}%
 }
 
 % Nowe polecenie dla samej flagi Polski
@@ -410,3 +428,33 @@ columns=1, options=-s "Preambuła/indeks_miejscowosci_style.ist"]
 
 % Wyłącznienie przedroska 'adr.' w bibliografii
 \DeclareFieldFormat{url}{\url{#1}}
+
+% Data dostępu: miesiąc w mianowniku i rok, bez dnia.
+ \renewbibmacro*{url+urldate}{%
+  \iffieldundef{url}
+    {}
+    {\usebibmacro{url}%
+     \setunit{\addcomma\addspace}%
+     \printtext{dostęp zdalny: \miesiacrokdwa}}}
+
+% Nazwy rozdziałów w spisie rycin
+\newcommand{\rozdzialwspisierycin}[1]{%
+  \addtocontents{lof}{%
+    \protect\par
+    \protect\addvspace{12pt}%
+    \protect\noindent
+    {\protect\bfseries #1\protect\par}%
+    \protect\nopagebreak
+    \protect\addvspace{4pt}%
+  }%
+}
+
+\makeatletter
+\patchcmd{\blx@bbx@online}
+  {\printtext[parens]{\usebibmacro{date}}}
+  {\iffieldundef{year}
+     {}
+     {\printtext[parens]{\usebibmacro{date}}}}
+  {}
+  {\PackageWarning{Preambula}{Nie udalo sie poprawic daty online}}
+\makeatother
