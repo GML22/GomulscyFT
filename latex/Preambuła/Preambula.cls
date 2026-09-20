@@ -375,7 +375,7 @@
 "Preambuła/indeks_osob_style.ist"]
 
 % Indeks miejscowości
-\makeindex[name=miejsca, title={Indeks miejscowości},
+\makeindex[name=miejsca, title={Indeks miejscowości urodzenia},
 columns=1, options=-s "Preambuła/indeks_miejscowosci_style.ist"]
 
 % Definicja makra do indeksowania osób i miejscowości:
