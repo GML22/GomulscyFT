@@ -81,6 +81,9 @@
   pdfdisplaydoctitle=true
 }
 
+% Usunięcie kropki po "nr"
+\DefineBibliographyStrings{polish}{number = {nr},}
+
 % Ustawienie parametrów tytułów rycin
 \captionsetup[figure]{format=hang}
 
