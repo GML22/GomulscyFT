@@ -457,3 +457,41 @@ columns=1, options=-s "Preambuła/indeks_miejscowosci_style.ist"]
   {}
   {\PackageWarning{Preambula}{Nie udalo sie poprawic daty online}}
 \makeatother
+
+
+% Definicja obiektów potrzebnych do stworzenia drzewa
+\definecolor{rod}{HTML}{8B151B}
+\definecolor{tusz}{HTML}{252421}
+\definecolor{papier}{HTML}{FFFFFF}
+
+\newcommand{\Osoba}[8]{%
+  \node[osoba, draw=#7, font=\fontsize{10}{10.5}\selectfont#8]
+    (#1) at (#2,#3) {#4\\[3pt]#5};
+  \node[miejsce, draw=#7, fill=#7, anchor=north]
+    (#1-miejsce) at (#1.south) {#6};
+}
+
+\newcommand{\Malzenstwo}[5]{%
+  % Dwie pętle z widocznym przeplotem w środku węzła.
+  \coordinate (wezel-#1-#2) at ($(#1.east)!.5!(#2.west)$);
+  \draw[malzenstwo, draw=#5]
+    (#1.east) -- ++(.1,0)
+    |- ($(wezel-#1-#2)+(-.48,0)$);
+
+  \draw[malzenstwo, draw=#5]
+    ($(wezel-#1-#2)+(.48,0)$)
+    -| ($(#2.west)+(-.1,0)$) -- (#2.west);
+  \begin{scope}[shift={(wezel-#1-#2)}]
+    \draw[sznur, draw=#5]
+      (-.48,0)
+      .. controls (-.48,.32) and (-.26,.32) .. (0,0)
+      .. controls (.26,-.32) and (.48,-.32) .. (.48,0)
+      .. controls (.48,.32) and (.26,.32) .. (0,0)
+      .. controls (-.26,-.32) and (-.48,-.32) .. cycle;
+    \draw[sznur, draw=#5, preaction={draw=white,line width=5pt}]
+      (-.14,.15) .. controls (-.05,.06) and (.05,-.06) .. (.14,-.15);
+    \node[opis, anchor=south, text=#5] at (0,.36) {#3};
+    \node[opis, fill=white, anchor=north, text=#5]
+      (rok-#1-#2) at (0,-.36) {#4};
+  \end{scope}
+}

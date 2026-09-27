@@ -37,7 +37,7 @@ wraz z~rodziną na~przełomie XIX~i~XX~wieku do~nowo powstałej wówczas wsi
 \emph{Desna} (obecnie Desno)~-- był jednym z~założycieli tej miejscowości
 (udziałowcem spółki \emph{Desna}). Losy rodziny Zawadzkich spod Mińska
 Mazowieckiego zostaną szerzej omówione w~\hyperref[sec:zawadzcy]{załączniku
-numer IV}.} wieś Anielina na~początku XIX~wieku zamieszkiwały również między
+numer III}.} wieś Anielina na~początku XIX~wieku zamieszkiwały również między
 innymi takie rodziny pochodzenia chłopskiego jak: Sikorscy, Ostrowscy,
 Baranowie, Michalscy, Zawadkowie, Sadowscy, Nalazkowie czy Sętorkowie.
 
@@ -109,9 +109,8 @@ lata starszy brat Michał, był jednym ze~współudziałowców spółki \emph{De
 
 Piotr i~Marianna Gumulscy mieli łącznie jedenaścioro
 dzieci\footnote{Drzewo genealogiczne najbliższej rodziny Piotra i~Marianny
-Gumulskich zostało szerzej zaprezentowane
-w~\hyperref[sec:drzewo_pfgumulski]{załączniku numer I}.}, z~czego
-prawdopodobnie tylko sześcioro dożyło dorosłości, byli nimi:
+Gumulskich zostało szerzej zaprezentowane na~końcu bieżącego podrozdziału.},
+z~czego prawdopodobnie tylko sześcioro dożyło dorosłości, byli nimi:
 Jan\indeksosoby{Jan}{Gomulski}{1836}{Zamienie} (ur.~1836~r. -- zm.~1901~r.),
 Grzegorz\indeksosoby{Grzegorz}{Gomulski}{1840}{Grzebowilk} (ur.~1840~r. --
 zm.~1906~r.),
@@ -203,7 +202,7 @@ Andrzej Gumulski wraz ze~swoją żoną Magdaleną dochowali się trójki dzieci,
 z~czego dwójka najstarszych urodziła się w~Anielinie, a~trzecie z~nich 
 przyszło na~świat we~wsi Jarząbek\footnote{Drzewo genealogiczne najbliższej
 rodziny Andrzeja i~Magdaleny Gumulskich zostało szerzej zaprezentowane
-w~\hyperref[sec:drzewo_agumulski]{załączniku numer I}.}. Ich dzieci to: 
+na~końcu bieżącego podrozdziału.}. Ich dzieci to: 
 
 \begin{itemize}
     \item Feliks\indeksosoby{Feliks}{Gomulski}{1875}{Anielina}
@@ -393,8 +392,8 @@ na~cmentarzu parafii pod wezwaniem św.~Kazimierza w~Pruszkowie, można jedynie
 stwierdzić, iż~urodzili się oni odpowiednio w~1923~(patrz: ryc.
 \ref{fig:mgomulska_1951}) oraz w~1929~roku (patrz: ryc.
 \ref{fig:czgomulski_1946})\footnote{Rodzinę Feliksa i~Małgorzaty Gomulskich
-uwzględniono na~drzewie genealogicznym rodziny Andrzeja i~Magdaleny Gumulskich
-w~\hyperref[sec:drzewo_agumulski]{załączniku numer I}.}.
+uwzględniono na~drzewie genealogicznym rodziny Andrzeja i~Magdaleny
+Gumulskich~-- na~końcu bieżącego podrozdziału.}.
 
 \begin{figure}[!ht]
     \vspace*{0.5cm}
@@ -563,6 +562,222 @@ mieszkają tam prawdopodobnie do~dnia dzisiejszego\footnote{Już nie
 w~Anielinie, bo~jak wspomniano wcześniej, obecnie jest to~teren Mińska
 Mazowieckiego.}.
 
+\newpage
+\begin{center}
+{\Large\bfseries Drzewo genealogiczne najbliższej rodziny Piotra Franciszka
+i~Marianny Gumulskich}
+\medskip
+
+\begin{tikzpicture}[
+  x=1cm, y=1cm,
+  osoba/.style={rectangle, draw=tusz, fill=white, line width=.8pt,
+    text width=2.08cm, minimum height=1.12cm, inner sep=3pt, align=center},
+  miejsce/.style={rectangle, line width=.8pt, text=white, text width=2.08cm,
+    text height=1.8ex, text depth=.5ex,
+    minimum height=.36cm, inner sep=3pt, align=center,
+    font=\fontsize{9}{9.5}\selectfont},
+  potomstwo/.style={draw=tusz, line width=.8pt},
+  malzenstwo/.style={double, double distance=1.3pt, line width=.45pt},
+  sznur/.style={double=white, double distance=1.4pt, line width=.65pt,
+    line cap=round, line join=round},
+  opis/.style={fill=none, inner sep=1pt, align=center,
+    font=\fontsize{8.5}{9.5}\selectfont}
+]
+
+\path[use as bounding box]
+  (-7.3,1.52) rectangle (7.3,-19.85);
+
+% Rodzice.
+\Osoba{piotr}{-2.05}{.5}
+  {Piotr\\Franciszek\\Gumulski}{1815--1870}{Rudzienko}{rod}{\bfseries}
+\Osoba{mariannaChlopik}{2.05}{.5}
+  {Marianna\\Chłopik}{1819--1880}{Zamienie}{rod}{\bfseries}
+\Malzenstwo{piotr}{mariannaChlopik}{Mińsk\\Maz.}{1835}{rod}
+
+% Oś potomstwa zaczyna się poniżej daty ślubu.
+\draw[rod, line width=1.2pt]
+  ([yshift=-2pt]rok-piotr-mariannaChlopik.south) -- (0,-3);
+\draw[potomstwo] (0,-3) -- (0,-15.6);
+
+% Jedenaścioro dzieci w kolejności urodzenia.
+\Osoba{jan}{-1.55}{-3}
+  {Jan\\Gomulski}{1836--1901}{Zamienie}{rod}{\bfseries}
+\Osoba{karolina}{1.55}{-4.4}
+  {Karolina\\Gomulska}{1839--1840}{Grzebowilk}{tusz}{}
+\Osoba{grzegorz}{1.55}{-6.85}
+  {Grzegorz\\Gomulski}{1840--1906}{Grzebowilk}{tusz}{}
+\Osoba{anna}{-1.55}{-8.1}
+  {Anna\\Gomulska}{1843--1905}{Grzebowilk}{tusz}{}
+\Osoba{katarzyna}{1.55}{-9.35}
+  {Katarzyna\\Gomulska}{1846--1855}{Grzebowilk}{tusz}{}
+\Osoba{tomasz}{-1.55}{-10.6}
+  {Tomasz\\Gomulski}{1849--1850}{Grzebowilk}{tusz}{}
+\Osoba{jozef}{1.55}{-11.85}
+  {Józef\\Gomulski}{1851--1854}{Grzebowilk}{tusz}{}
+\Osoba{rozalia}{-1.55}{-13.1}
+  {Rozalia\\Gomulska}{1853--1929}{Anielina}{tusz}{}
+\Osoba{jozefa}{1.55}{-14.35}
+  {Józefa\\Gomulska}{1857--1872}{Anielina}{tusz}{}
+\Osoba{michal}{-1.55}{-15.6}
+  {Michał\\Gomulski}{1859--1918}{Anielina}{tusz}{}
+
+% Ostatni rząd odsunięty od paska miejscowości Michała.
+\coordinate (wierszStanislawa) at
+  ($(0,0 |- michal-miejsce.south)+(0,-1.35)$);
+\begin{scope}[shift={(wierszStanislawa)}]
+\Osoba{stanislaw}{0}{0}
+  {Stanisław\\Gomulski}{1863--1929}{Anielina}{tusz}{}
+\end{scope}
+
+\draw[rod, line width=1.2pt] (0,-3) -- (jan.east);
+\foreach \dziecko in {anna,tomasz,rozalia,michal}{
+  \draw[potomstwo] (0,0 |- \dziecko.east) -- (\dziecko.east);
+}
+\foreach \dziecko in {karolina,grzegorz,katarzyna,jozef,jozefa}{
+  \draw[potomstwo] (0,0 |- \dziecko.west) -- (\dziecko.west);
+}
+\draw[potomstwo] (0,-15.6) -- (stanislaw.north);
+
+% Dwa małżeństwa Jana
+\Osoba{agnieszka}{-5.9}{-1.2}
+  {Agnieszka\\Piotrkowicz}{1840--1881}{Budy Barcz.}{rod}{\bfseries}
+\Malzenstwo{agnieszka}{jan}{Mińsk\\Maz.}{1858}{rod}
+\Osoba{wiktoria}{-5.9}{-4.8}
+  {{\fontsize{8.5}{9.5}\selectfont Wiktoria \\ Świętochowska}}
+  {1862--1937}{Dłużka}{tusz}{}
+\Malzenstwo{wiktoria}{jan}{Mińsk\\Maz.}{1881}{tusz}
+
+% Małżeństwo Grzegorza.
+\Osoba{mariannaBak}{5.9}{-6.85}
+  {Marianna\\Bąk}{1841--1906}{Dębe Wielkie}{tusz}{}
+\Malzenstwo{grzegorz}{mariannaBak}{Mińsk\\Maz.}{1862}{tusz}
+
+% Małżeństwo Anny.
+\Osoba{antoni}{-5.9}{-8.1}
+  {Antoni\\Michalski}{1843--1908}{Regut}{tusz}{}
+\Malzenstwo{antoni}{anna}{Mińsk\\Maz.}{1864}{tusz}
+
+% Małżeństwo Rozalii.
+\Osoba{jozefSzostak}{-5.9}{-13.1}
+  {Józef\\Szostak}{1846--1897}{Targówka}{tusz}{}
+\Malzenstwo{jozefSzostak}{rozalia}{Mińsk\\Maz.}{1876}{tusz}
+
+% Małżeństwo Michała.
+\Osoba{mariannaWrobel}{-5.9}{-15.6}
+  {Marianna\\Wróbel}{1860--1934}{Siennica}{tusz}{}
+\Malzenstwo{mariannaWrobel}{michal}{Mińsk\\Maz.}{1881}{tusz}
+
+% Małżeństwo Stanisława.
+\begin{scope}[shift={(wierszStanislawa)}]
+\Osoba{elzbieta}{4.35}{0}
+  {Elżbieta\\Brodzińska}{1857--1928}{Grębiszew}{tusz}{}
+\end{scope}
+\Malzenstwo{stanislaw}{elzbieta}{Mińsk\\Maz.}{1882}{tusz}
+
+\end{tikzpicture}
+\end{center}
+
+\medskip
+\noindent{\footnotesize \textbf{Źródło: Opracowanie własne.}}
+
+\newpage
+\begin{center}
+{\Large\bfseries Drzewo genealogiczne najbliższej rodziny Andrzeja i~Magdaleny
+Gumulskich}
+\medskip
+
+\begin{tikzpicture}[
+  x=1cm, y=1cm,
+  osoba/.style={rectangle, draw=tusz, fill=white, line width=.8pt,
+    text width=2.08cm, minimum height=1.12cm, inner sep=3pt, align=center},
+  miejsce/.style={rectangle, line width=.8pt, text=white, text width=2.08cm,
+    text height=1.8ex, text depth=.5ex,
+    minimum height=.36cm, inner sep=3pt, align=center,
+    font=\fontsize{9}{9.5}\selectfont},
+  potomstwo/.style={draw=tusz, line width=.8pt},
+  malzenstwo/.style={double, double distance=1.3pt, line width=.45pt},
+  sznur/.style={double=white, double distance=1.4pt, line width=.65pt,
+    line cap=round, line join=round},
+  opis/.style={fill=none, inner sep=1pt, align=center,
+    font=\fontsize{8.5}{9.5}\selectfont}
+]
+
+\path[use as bounding box]
+  (-7.3,1.52) rectangle (7.3,-16.9);
+
+% Pokolenie rodziców.
+\Osoba{andrzej}{-2.05}{.5}
+  {Andrzej\\Gumulski}{1829--1887}{Zamienie}{tusz}{}
+\Osoba{magdalena}{2.05}{.5}
+  {Magdalena\\Michalska}{1848--1904}{Anielina}{tusz}{}
+\Malzenstwo{andrzej}{magdalena}{Mińsk\\Maz.}{1872}{tusz}
+
+% Troje dzieci Andrzeja i Magdaleny.
+\Osoba{feliks}{-1.55}{-2.3}
+  {Feliks\\Gomulski}{1875--1941}{Anielina}{tusz}{}
+\Osoba{antonina}{1.55}{-3.55}
+  {Antonina\\Gomulska}{1878--1955}{Anielina}{tusz}{}
+\Osoba{ludwika}{1.55}{-6.8}
+  {Ludwika\\Gomulska}{1882--1884}{Jarząbek}{tusz}{}
+\draw[potomstwo]
+  ([yshift=-2pt]rok-andrzej-magdalena.south) -- (0,-5.8);
+\draw[potomstwo] (0,-2.3) -- (feliks.east);
+\draw[potomstwo] (0,-3.55) -- (antonina.west);
+\draw[potomstwo] (0,-6.8) -- (ludwika.west);
+
+% Małżeństwa Feliksa i Antoniny.
+\Osoba{malgorzata}{-5.9}{-2.3}
+  {Małgorzata\\Makowska}{1888--1951}{Słomin}{tusz}{}
+\Malzenstwo{malgorzata}{feliks}{Pęcice}{1909}{tusz}
+\Osoba{michal}{5.9}{-3.55}
+  {Michał\\Araźny}{1869--1953}{Olesin}{tusz}{}
+\Malzenstwo{antonina}{michal}{Mińsk\\Maz.}{1896}{tusz}
+
+% Oś potomstwa Feliksa i Małgorzaty: x = -3.725
+\draw[potomstwo]
+  ([yshift=-2pt]rok-malgorzata-feliks.south) -- (-3.725,-12.8);
+\Osoba{henryk}{-5.275}{-5.3}
+  {Henryk\\Gomulski}{1910--?}{Słomin}{tusz}{}
+\Osoba{czeslaw}{-2.175}{-6.55}
+  {Czesław\\Gomulski}{1912--1946}{Słomin}{tusz}{}
+\Osoba{walerian}{-5.275}{-7.8}
+  {Walerian\\Gomulski}{1914--1995}{Mińsk Maz.}{tusz}{}
+\Osoba{helena}{-2.175}{-9.05}
+  {Helena\\Gomulska}{1917--1917}{Anielina}{tusz}{}
+\Osoba{zygmunt}{-5.275}{-10.3}
+  {Zygmunt\\Gomulski}{1918--1943}{Anielina}{tusz}{}
+\Osoba{janina}{-2.175}{-11.55}
+  {Janina\\Gomulska}{1920--2008}{Mińsk Maz.}{tusz}{}
+\Osoba{jadwiga}{-5.275}{-12.8}
+  {Jadwiga\\Gomulska}{1923--1994}{?}{tusz}{}
+
+% Dolna ramka odsunięta od paska miejscowości Jadwigi
+\coordinate (wierszMieczyslawa) at
+  ($(-3.725,0 |- jadwiga-miejsce.south)+(0,-1.35)$);
+\begin{scope}[shift={(wierszMieczyslawa)}]
+\Osoba{mieczyslaw}{0}{0}
+  {Mieczysław\\Gomulski}{1929--1968}{?}{tusz}{}
+\end{scope}
+
+\foreach \dziecko in {henryk,walerian,zygmunt,jadwiga}{
+  \draw[potomstwo] (-3.725,0 |- \dziecko.east) -- (\dziecko.east);
+}
+\foreach \dziecko in {czeslaw,helena,janina}{
+  \draw[potomstwo] (-3.725,0 |- \dziecko.west) -- (\dziecko.west);
+}
+\draw[potomstwo] (-3.725,-12.8) -- (mieczyslaw.north);
+
+% Małżeństwo Janiny.
+\Osoba{waclaw}{2.175}{-11.55}
+  {Wacław\\Kubiciel}{?--?}{?}{tusz}{}
+\Malzenstwo{janina}{waclaw}{Pruszków}{1978}{tusz}
+
+\end{tikzpicture}
+\end{center}
+
+\medskip
+\noindent{\footnotesize \textbf{Źródło: Opracowanie własne.}}
+
 % Przednia okładka podrozdziału
 \newpage
 \includepdf{Wolka_Minska_mapa_fin.png}
@@ -618,7 +833,7 @@ Olszewskiego\indeksosoby{Jan Ferdynand \flagaPL}{Olszewski}{1930}{Warszawa}
 (ur.~1930~r. -- zm.~2019~r.) oraz prapradziadkiem Stefana Aleksandra
 Okrzei\indeksosoby{Stefan Aleksander \flagaPL}{Okrzeja}{1886}{Dębe Wielkie}
 (ur.~1886~r. -- zm.~1905~r.), działacza niepodległościowego i~socjalistycznego,
-co~zostało szerzej opisane w~\hyperref[sec:piotrkowicze]{załączniku numer~V}.}.
+co~zostało szerzej opisane w~\hyperref[sec:piotrkowicze]{załączniku numer~IV}.}.
 
 \begin{figure}[!ht]
     \vspace*{0.5cm}
@@ -1028,9 +1243,9 @@ Gomulski\indeksosoby{Jan}{Gomulski}{1836}{Zamienie} zmarł 6~marca 1901~roku
 w~Wólce Mińskiej, w~wieku sześćdziesięciu czterech lat (patrz: ryc.
 \ref{fig:jgomulski_1901}). Dochował się on~łącznie dwudziestu trojga dzieci
 z~dwóch małżeństw, z~Agnieszką miał dwanaścioro dzieci, a~z~Wiktorią
-jedenaścioro\footnote{Drzewo genealogiczne najbliższej rodziny Jana
-Gomulskiego oraz jego dwóch żon zostało szerzej zaprezentowane
-w~\hyperref[sec:drzewo_jgomulski]{załączniku numer I}.}. Najstarszy syn Jana,
+jedenaścioro\footnote{Drzewa genealogiczne najbliższej rodziny Jana
+Gomulskiego oraz jego dwóch żon zostały szerzej zaprezentowane na~końcu
+bieżącego porozdziału.}. Najstarszy syn Jana,
 Józef\indeksosoby{Józef}{Gomulski}{1859}{Anielina}, urodził się, gdy Jan miał
 dwadzieścia dwa lata, a~jego ostatnie dziecko, córka Wanda, urodziło się pięć
 miesięcy po~jego śmierci~-- 21~sierpnia 1901~roku. Wiktoria
@@ -1139,6 +1354,175 @@ oraz jego okolicach, przede wszystkim:
 Świadczą o~tym liczne nagrobki na cmentarzu parafii pod wezwaniem
 Narodzenia Najświętszej Maryi Panny w~Mińsku Mazowieckim (ul. Kościelna~1,
 05-300 Mińsk Mazowiecki), gdzie spoczywa wielu członków rodziny Gomulskich.
+
+\newpage
+\begin{center}
+{\Large\bfseries Drzewo genealogiczne najbliższej rodziny Jana i~Agnieszki
+Gomulskich}
+\medskip
+
+\begin{tikzpicture}[
+  x=1cm, y=1cm,
+  osoba/.style={rectangle, draw=tusz, fill=white, line width=.8pt,
+    text width=2.08cm, minimum height=1.12cm, inner sep=3pt, align=center},
+  miejsce/.style={rectangle, line width=.8pt, text=white, text width=2.08cm,
+    text height=1.8ex, text depth=.5ex,
+    minimum height=.36cm, inner sep=3pt, align=center,
+    font=\fontsize{9}{9}\selectfont},
+  potomstwo/.style={draw=tusz, line width=.8pt},
+  malzenstwo/.style={double, double distance=1.3pt, line width=.45pt},
+  sznur/.style={double=white, double distance=1.4pt, line width=.65pt,
+    line cap=round, line join=round},
+  opis/.style={fill=none, inner sep=1pt, align=center,
+    font=\fontsize{8.5}{9.5}\selectfont}
+]
+\path[use as bounding box] (-11.8,1.52) rectangle (3.1,-19.2);
+\Osoba{agnieszka}{-8.7}{0.5}
+  {Agnieszka\\Piotrkowicz}{1840--1881}{Budy Barcz.}{rod}{\bfseries}
+\Osoba{jan}{0}{0.5}
+  {Jan\\Gomulski}{1836--1901}{Zamienie}{rod}{\bfseries}
+\Osoba{aJozef}{-5.9}{-2.7}
+  {Józef\\Gomulski}{1859--1929}{Anielina}{tusz}{}
+\Osoba{aStanislaw}{-2.8}{-3.9}
+  {Stanisław\\Gomulski}{1861--1910}{Wólka Mińska}{rod}{\bfseries}
+\Osoba{aJan}{-5.9}{-5.1}
+  {Jan\\Gomulski}{1863--1932}{Wólka Mińska}{tusz}{}
+\Osoba{aJulianna}{-2.8}{-6.3}
+  {Julianna\\Gomulska}{1865--1868}{Wólka Mińska}{tusz}{}
+\Osoba{aMarianna}{-5.9}{-7.5}
+  {Marianna\\Gomulska}{1867--1868}{Wólka Mińska}{tusz}{}
+\Osoba{aJozefa}{-2.8}{-8.7}
+  {Józefa\\Gomulska}{1869--1872}{Wólka Mińska}{tusz}{}
+\Osoba{aAnna}{-5.9}{-9.9}
+  {Anna\\Gomulska}{1872--?}{Wólka Mińska}{tusz}{}
+\Osoba{aAntonina}{-2.8}{-12.1}
+  {Antonina\\Paulina\\Gomulska}{1874--1877}{Wólka Mińska}{tusz}{}
+\Osoba{aZofia}{-5.9}{-12.3}
+  {Zofia\\Gomulska}{1876--1948}{Wólka Mińska}{tusz}{}
+\Osoba{aAntoni}{-5.9}{-15.4}
+  {Antoni\\Gomulski}{1879--?}{Wólka Mińska}{tusz}{}
+\Osoba{aFranciszek}{-2.8}{-15.4}
+  {Franciszek\\Gomulski}{1879--1886}{Wólka Mińska}{tusz}{}
+\Osoba{aMariannaII}{-4.35}{-18.1}
+  {Marianna\\Gomulska}{1881--1881}{Wólka Mińska}{tusz}{}
+\Osoba{annaDob}{-10.25}{-2.7}
+  {Anna\\Dobrzyńska}{1867--1935}{Karolina}{tusz}{}
+\Osoba{juliannaGagol}{1.55}{-3.9}
+  {Julianna\\Gągol}{1862--?}{Dłużka}{rod}{\bfseries}
+\Osoba{mariannaSw}{-10.25}{-5.1}
+  {{\fontsize{8.5}{9}\selectfont Marianna\\Świętochowska}}{1864--1912}{Dłużka}{tusz}{}
+\Osoba{wojciechK}{-10.25}{-9.9}
+  {{\fontsize{8.5}{9.5}\selectfont Wojciech\\Kwiatkowski}}{1876--?}{Górki}{tusz}{}
+\Osoba{wojciechW}{-10.25}{-12.3}
+  {Wojciech\\Wojdyga}{1865--1940}{Choszcz. Dęb.}{tusz}{}
+\Osoba{zofiaO}{-10.25}{-15.4}
+  {Zofia\\Orłowska}{1869--?}{Brzozówka}{tusz}{}
+\Malzenstwo{agnieszka}{jan}{Mińsk\\Maz.}{1858}{rod}
+\Malzenstwo{annaDob}{aJozef}{Mińsk\\Maz.}{1887}{tusz}
+\Malzenstwo{aStanislaw}{juliannaGagol}{Mińsk\\Maz.}{1881}{rod}
+\Malzenstwo{mariannaSw}{aJan}{Mińsk\\Maz.}{1881}{tusz}
+\Malzenstwo{wojciechK}{aAnna}{Mińsk\\Maz.}{1894}{tusz}
+\Malzenstwo{wojciechW}{aZofia}{Mińsk\\Maz.}{1895}{tusz}
+\Malzenstwo{zofiaO}{aAntoni}{Siennica}{1902}{tusz}
+
+\draw[rod,line width=1.2pt] ([yshift=-2pt]rok-agnieszka-jan.south) -- (-4.35,-3.9);
+\draw[potomstwo] (-4.35,-3.9) -- (aMariannaII.north);
+\foreach \dziecko in {aJozef,aJan,aMarianna,aAnna,aZofia}{
+  \draw[potomstwo] (-4.35,0 |- \dziecko.east) -- (\dziecko.east);
+}
+\draw[rod,line width=1.2pt] (-4.35,-3.9) -- (aStanislaw.west);
+\foreach \dziecko in {aJulianna,aJozefa,aAntonina}{
+  \draw[potomstwo] (-4.35,0 |- \dziecko.west) -- (\dziecko.west);
+}
+\draw[potomstwo] (-4.35,-14.35) -| (aAntoni.north);
+\draw[potomstwo] (-4.35,-14.35) -| (aFranciszek.north);
+\node[fill=white,inner sep=2pt,font=\scriptsize\bfseries] at (-4.35,-14.35) {BLIŹNIAKI};
+\end{tikzpicture}
+\end{center}
+
+\medskip
+\noindent{\footnotesize \textbf{Źródło: Opracowanie własne.}}
+
+\newpage
+\begin{center}
+{\Large\bfseries Drzewo genealogiczne najbliższej rodziny Jana i~Wiktorii
+Gomulskich}
+\medskip
+
+\begin{tikzpicture}[
+  x=1cm, y=1cm,
+  osoba/.style={rectangle, draw=tusz, fill=white, line width=.8pt,
+    text width=2.08cm, minimum height=1.12cm, inner sep=3pt, align=center},
+  miejsce/.style={rectangle, line width=.8pt, text=white, text width=2.08cm,
+    text height=1.8ex, text depth=.5ex,
+    minimum height=.36cm, inner sep=3pt, align=center,
+    font=\fontsize{9}{9}\selectfont},
+  potomstwo/.style={draw=tusz, line width=.8pt},
+  malzenstwo/.style={double, double distance=1.3pt, line width=.45pt},
+  sznur/.style={double=white, double distance=1.4pt, line width=.65pt,
+    line cap=round, line join=round},
+  opis/.style={fill=none, inner sep=1pt, align=center,
+    font=\fontsize{8.5}{9.5}\selectfont}
+]
+\path[use as bounding box] (-3.1,1.52) rectangle (11.8,-17.8);
+\Osoba{jan}{0}{0.5}
+  {Jan\\Gomulski}{1836--1901}{Zamienie}{rod}{\bfseries}
+\Osoba{wiktoria}{8.7}{0.5}
+  {{\fontsize{8.5}{9}\selectfont Wiktoria\\Świętochowska}}{1862--1937}{Dłużka}{tusz}{}
+\Osoba{wMarianna}{2.8}{-2.7}
+  {Marianna\\Gomulska}{1882--1953}{Wólka Mińska}{tusz}{}
+\Osoba{wJozef}{5.9}{-3.4}
+  {Józef\\Gomulski}{1884--1929}{Mińsk Maz.}{tusz}{}
+\Osoba{wLudwik}{2.8}{-5.15}
+  {Ludwik\\Gomulski}{1886--?}{Mińsk Maz.}{tusz}{}
+\Osoba{wFranciszek}{5.9}{-6.15}
+  {Franciszek\\Stefan\\Gomulski}{1888--1889}{Mińsk Maz.}{tusz}{}
+\Osoba{wBezimienna}{2.8}{-7.65}
+  {Bezimienna\\Gomulska}{1891--1891}{Mińsk Maz.}{tusz}{}
+\Osoba{wWladyslaw}{5.9}{-8.9}
+  {Władysław\\Gomulski}{1892--1893}{Mińsk Maz.}{tusz}{}
+\Osoba{wEleonora}{2.8}{-10.1}
+  {Eleonora\\Gomulska}{1894--1957}{Wólka Mińska}{tusz}{}
+\Osoba{wMieczyslaw}{5.9}{-11.3}
+  {Mieczysław\\Gomulski}{1896--1967}{Wólka Mińska}{tusz}{}
+\Osoba{wWanda}{5.9}{-13.7}
+  {Wanda\\Gomulska}{1897--1898}{Wólka Mińska}{tusz}{}
+\Osoba{wBronislaw}{2.8}{-14.95}
+  {Bronisław\\Gomulski}{1899--1905}{Wólka Mińska}{tusz}{}
+\Osoba{wWandaII}{5.9}{-16.2}
+  {Wanda\\Gomulska}{1901--1978}{Wólka Mińska}{tusz}{}
+\Osoba{wladyslawM}{10.25}{-16.2}
+  {Władysław\\Majszyk}{1898--1948}{?}{tusz}{}
+\Osoba{jozefK}{-1.55}{-2.7}
+  {Józef\\Królak}{1868--1936}{Łaziska}{tusz}{}
+\Osoba{jozefaS}{10.25}{-3.4}
+  {Józefa\\Sadoch}{1887--?}{Łaziska}{tusz}{}
+\Osoba{stanislawK}{-1.55}{-8.2}
+  {Stanisław\\Klimek}{1888--1917}{Karolina}{tusz}{}
+\Osoba{stanislawW}{-1.55}{-12}
+  {Stanisław\\Wilk}{1897--1941}{Piotrkowice}{tusz}{}
+\Osoba{mariannaB}{10.25}{-11.3}
+  {Marianna\\Bartnicka}{1902--1986}{Karolina}{tusz}{}
+\Malzenstwo{jan}{wiktoria}{Mińsk\\Maz.}{1881}{tusz}
+\Malzenstwo{jozefK}{wMarianna}{Mińsk\\Maz.}{1899}{tusz}
+\Malzenstwo{wJozef}{jozefaS}{Jakubów}{1907}{tusz}
+\Malzenstwo{stanislawK}{wEleonora}{Mińsk\\Maz.}{1913}{tusz}
+\Malzenstwo{stanislawW}{wEleonora}{Mińsk\\Maz.}{1921}{tusz}
+\Malzenstwo{wMieczyslaw}{mariannaB}{Mińsk\\Maz.}{1921}{tusz}
+\Malzenstwo{wWandaII}{wladyslawM}{Mińsk\\Maz.}{1926}{tusz}
+
+\draw[potomstwo] ([yshift=-2pt]rok-jan-wiktoria.south) -- (4.35,-16.2);
+\foreach \dziecko in {wJozef,wFranciszek,wWladyslaw,wMieczyslaw,wWanda,wWandaII}{
+  \draw[potomstwo] (4.35,0 |- \dziecko.west) -- (\dziecko.west);
+}
+\foreach \dziecko in {wMarianna,wLudwik,wBezimienna,wEleonora,wBronislaw}{
+  \draw[potomstwo] (4.35,0 |- \dziecko.east) -- (\dziecko.east);
+}
+\end{tikzpicture}
+\end{center}
+
+\medskip
+\noindent{\footnotesize \textbf{Źródło: Opracowanie własne.}}
 
 % Przednia okładka podrozdziału
 \newpage
