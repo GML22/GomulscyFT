@@ -373,6 +373,11 @@
 \defbibheading{subbibliography}[\refname]{%
   \tocless{\section*}{#1}}
 
+  % Nie dziel pojedynczych pozycji bibliograficznych między strony
+\appto{\bibsetup}{%
+  \interlinepenalty=10000\relax
+}
+
 % Indeks osób
 \makeindex[name=osoby, title={Indeks osób}, columns=1, options=-s
 "Preambuła/indeks_osob_style.ist"]
@@ -494,4 +499,96 @@ columns=1, options=-s "Preambuła/indeks_miejscowosci_style.ist"]
     \node[opis, fill=white, anchor=north, text=#5]
       (rok-#1-#2) at (0,-.36) {#4};
   \end{scope}
+}
+
+% Wspólna legenda drzew genealogicznych
+\newcommand{\LegendaDrzewa}{%
+  \begin{tikzpicture}[
+    x=1cm, y=1cm,
+    draw=tusz,
+    text=tusz,
+    line width=.5pt,
+    font=\fontsize{8}{9.5}\selectfont,
+    every node/.style={inner sep=0pt},
+    obja/.style={anchor=west, align=left}
+  ]
+
+  % Obramowanie i tytuł
+  \draw (0,0) rectangle (13.7,-3.15);
+  \node[font=\fontsize{8}{9.5}\selectfont\bfseries]
+    at (6.85,-.35) {OBJAŚNIENIA OZNACZEŃ DRZEWA GENEALOGICZNEGO};
+
+  % Podział na trzy części
+  \draw[tusz!25] (4.8,-.7) -- (4.8,-2.9);
+  \draw[tusz!25] (9.6,-.7) -- (9.6,-2.9);
+
+  % 1. Przykładowe pole osoby
+  \draw (.3,-.85) rectangle (2.15,-2.15);
+  \node[align=center] at (1.225,-1.3)
+    {Imię\\Nazwisko};
+  \node at (1.225,-1.92) {1800--1872};
+
+  \filldraw[fill=tusz, draw=tusz, line width=.5pt]
+  (.3,-2.15) rectangle (2.15,-2.6);
+  \node[text=white] at (1.225,-2.375) {Miejscowość};
+
+  \draw (2.2,-1.92) -- (2.45,-1.92);
+  \node[obja, text width=2cm] at (2.55,-1.92)
+    {Lata życia};
+
+  \draw (2.2,-2.375) -- (2.45,-2.375);
+  \node[obja, text width=2cm] at (2.55,-2.48)
+    {Miejsce\\urodzenia};
+
+  % 2. Małżeństwo — symbol zgodny z drzewami
+  \begin{scope}[shift={(5.8,-1.43)}]
+    \node[anchor=south] at (0,.4) {Miejsce ślubu};
+    \node[anchor=north] at (0,-.4) {Rok ślubu};
+
+    \draw[double, double distance=1pt, line width=.4pt]
+      (-.7,0) -- (-.48,0);
+    \draw[double, double distance=1pt, line width=.4pt]
+      (.48,0) -- (.7,0);
+
+    \draw[
+      double=white,
+      double distance=1.2pt,
+      line width=.55pt,
+      line cap=round,
+      line join=round
+    ]
+      (-.48,0)
+      .. controls (-.48,.32) and (-.26,.32) .. (0,0)
+      .. controls (.26,-.32) and (.48,-.32) .. (.48,0)
+      .. controls (.48,.32) and (.26,.32) .. (0,0)
+      .. controls (-.26,-.32) and (-.48,-.32) .. cycle;
+
+    \draw[
+      double=white,
+      double distance=1.2pt,
+      line width=.55pt,
+      preaction={draw=white,line width=4pt}
+    ]
+      (-.14,.15)
+      .. controls (-.05,.06) and (.05,-.06) .. (.14,-.15);
+  \end{scope}
+
+  \node[obja] at (6.8,-1.43) {Małżeństwo};
+
+  % Potomstwo
+  \draw (5.8,-2.2) -- (5.8,-2.45);
+  \draw (5.4,-2.75) -- (5.4,-2.45)
+    -- (6.2,-2.45) -- (6.2,-2.75);
+  \node[obja] at (6.8,-2.48) {Potomstwo};
+
+  % 3. Wyróżnienia i brak danych
+  \fill[rod] (9.95,-.9) rectangle (10.3,-1.25);
+  \node[obja, font=\fontsize{8}{9.5}\selectfont\bfseries]
+    at (10.5,-1.08) {Linia rodzinna\\autora książki};
+
+  \node[font=\fontsize{14}{15}\selectfont]
+    at (10.125,-1.9) {?};
+  \node[obja] at (10.5,-1.9) {Dane nieustalone};
+
+  \end{tikzpicture}%
 }

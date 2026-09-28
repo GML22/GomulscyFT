@@ -2,17 +2,34 @@
 % Załącznik I
 %-----------------------------------------------------------------------------
 
-\cleardoublepage
-\chapter*{Załączniki}
-\markboth{}{}{}
+% Dokładnie jedna pusta strona
+\clearpage
+\null
+\thispagestyle{empty}
+\newpage
 
-\hspace*{2cm}{\Large \textbf{I. Poziemscy spod Łochowa}}\\
-\\
-\hspace*{2cm}{\Large \textbf{II. Tkaczykowie spod Winnicy}}\\
-\\
-\hspace*{2cm}{\Large \textbf{III. Zawadzcy spod Mińska Mazowieckiego}}\\
-\\
-\hspace*{2cm}{\Large \textbf{IV. Piotrkowicze i~Okrzejowie z~Dębego}}
+% Bez dodatkowej strony wyrównującej początek rozdziału
+\begingroup
+  \let\cleardoublepage\clearpage
+  \chapter*{Załączniki}
+\endgroup
+\markboth{}{}
+
+\hspace*{2cm}{\Large\bfseries
+  \hyperref[sec:poziemscy]{I. Poziemscy spod Łochowa}}
+\par\bigskip
+
+\hspace*{2cm}{\Large\bfseries
+  \hyperref[sec:tkaczykowie]{II. Tkaczykowie spod Winnicy}}
+\par\bigskip
+
+\hspace*{2cm}{\Large\bfseries
+  \hyperref[sec:zawadzcy]{III. Zawadzcy spod Mińska Mazowieckiego}}
+\par\bigskip
+
+\hspace*{2cm}{\Large\bfseries
+  \hyperref[sec:piotrkowicze]{IV. Piotrkowicze i~Okrzejowie z~Dębego}}
+\par
 
 \newpage
 \renewcommand{\thefigure}{Z1.\arabic{figure}}
@@ -619,7 +636,7 @@ Kazimiery\indeksosoby[Poziemska][Jurkowska]{Kazimiera}{Andryszewska}{1920}{Desno
 z~Desna w~okolice miasta Morąg leżącego w~województwie
 warmińsko-mazurskim\footnote{Nie byli oni jedynymi mieszkańcami Desna, którzy
 tam się przeprowadzili~-- Marcjanna
-Gomulska\indeksosoby[Karłowska]{Marcjanna}{Gomulska}{1899}{Desno}
+Gomulska\indeksosoby[Karłowska]{Marcjanna}{Gomulska}{1899}{Cisie}
 z~domu Karłowska, żona Józefa\indeksosoby{Józef}{Gomulski}{1892}{Anielina}
 (ur. 1892~r. -- zm. 1950~r.), po~śmierci swojego męża również dożyła swoich
 dni właśnie w~okolicach Morąga, umierając tam w~1984~roku.}, w~ramach programu
