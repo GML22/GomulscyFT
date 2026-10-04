@@ -345,7 +345,7 @@
 
 % Makro do wyświetlania bieżącego miesiąca i roku 2
 \newcommand{\miesiacrokdwa}{%
-  wrzesień 2026~r.}
+  październik 2026~r.}
 
 % Makro do dużego pogrubionego tekstu
 \newcommand{\BigBold}[1]{\par\bigskip\noindent\textbf{\Large #1}\par\smallskip}
